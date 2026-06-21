@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "video_xl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.55373,
+    "min": 0.111292,
+    "max": 0.789732,
+    "std": 0.08707
+  },
+  "timestamp": "2025-11-13T18:58:38.148615",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.417222,
+      "std": 0.058416,
+      "min": 0.20073,
+      "max": 0.547503
+    },
+    "recall": {
+      "mean": 0.395695,
+      "std": 0.064856,
+      "min": 0.055007,
+      "max": 0.567979
+    },
+    "f1": {
+      "mean": 0.404475,
+      "std": 0.057437,
+      "min": 0.086351,
+      "max": 0.540782
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.46601,
+      "std": 0.064607,
+      "min": 0.097248,
+      "max": 0.641967
+    }
+  }
+}

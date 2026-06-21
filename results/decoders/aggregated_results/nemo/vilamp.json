@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "vilamp",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.648828,
+    "min": 0.356042,
+    "max": 0.827082,
+    "std": 0.084377
+  },
+  "timestamp": "2025-11-13T21:07:02.805520",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.561214,
+      "std": 0.053743,
+      "min": 0.39406,
+      "max": 0.729333
+    },
+    "recall": {
+      "mean": 0.537524,
+      "std": 0.055298,
+      "min": 0.385507,
+      "max": 0.726345
+    },
+    "f1": {
+      "mean": 0.548158,
+      "std": 0.049411,
+      "min": 0.389736,
+      "max": 0.673322
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.592676,
+      "std": 0.05918,
+      "min": 0.38637,
+      "max": 0.737923
+    }
+  }
+}

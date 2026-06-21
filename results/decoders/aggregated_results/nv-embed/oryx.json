@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "oryx",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.481945,
+    "min": 0.202332,
+    "max": 0.74016,
+    "std": 0.104081
+  },
+  "timestamp": "2025-11-13T18:52:13.404379",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.411985,
+      "std": 0.077741,
+      "min": 0.128379,
+      "max": 0.631432
+    },
+    "recall": {
+      "mean": 0.297963,
+      "std": 0.074318,
+      "min": 0.105481,
+      "max": 0.505093
+    },
+    "f1": {
+      "mean": 0.341632,
+      "std": 0.067748,
+      "min": 0.115809,
+      "max": 0.56124
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.397749,
+      "std": 0.077442,
+      "min": 0.147305,
+      "max": 0.638401
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "internvl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.569463,
+    "min": 0.026468,
+    "max": 0.843335,
+    "std": 0.098167
+  },
+  "timestamp": "2025-11-13T18:46:10.892043",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.383905,
+      "std": 0.061779,
+      "min": 0.079266,
+      "max": 0.569208
+    },
+    "recall": {
+      "mean": 0.373118,
+      "std": 0.072607,
+      "min": 0.024074,
+      "max": 0.545266
+    },
+    "f1": {
+      "mean": 0.376252,
+      "std": 0.063098,
+      "min": 0.036931,
+      "max": 0.525178
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.451491,
+      "std": 0.072564,
+      "min": 0.030836,
+      "max": 0.646954
+    }
+  }
+}

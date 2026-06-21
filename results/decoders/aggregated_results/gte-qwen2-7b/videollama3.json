@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "videollama3",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.75308,
+    "min": 0.572392,
+    "max": 0.886042,
+    "std": 0.052161
+  },
+  "timestamp": "2025-11-13T19:54:01.309557",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.641644,
+      "std": 0.042551,
+      "min": 0.551901,
+      "max": 0.763704
+    },
+    "recall": {
+      "mean": 0.648209,
+      "std": 0.042465,
+      "min": 0.533168,
+      "max": 0.792255
+    },
+    "f1": {
+      "mean": 0.644251,
+      "std": 0.037107,
+      "min": 0.565825,
+      "max": 0.765043
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.693719,
+      "std": 0.038098,
+      "min": 0.595964,
+      "max": 0.783258
+    }
+  }
+}

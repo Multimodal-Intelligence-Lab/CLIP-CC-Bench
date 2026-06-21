@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "sharegpt4",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.716993,
+    "min": 0.502763,
+    "max": 0.909145,
+    "std": 0.07264
+  },
+  "timestamp": "2025-11-13T22:36:23.716252",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.713151,
+      "std": 0.036059,
+      "min": 0.60237,
+      "max": 0.795896
+    },
+    "recall": {
+      "mean": 0.697799,
+      "std": 0.041305,
+      "min": 0.582351,
+      "max": 0.811677
+    },
+    "f1": {
+      "mean": 0.704944,
+      "std": 0.034462,
+      "min": 0.592192,
+      "max": 0.792625
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.709799,
+      "std": 0.04999,
+      "min": 0.55256,
+      "max": 0.839752
+    }
+  }
+}

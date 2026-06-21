@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "oryx",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.474357,
+    "min": 0.239519,
+    "max": 0.740998,
+    "std": 0.098611
+  },
+  "timestamp": "2025-11-13T20:33:44.121876",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.504167,
+      "std": 0.062234,
+      "min": 0.247657,
+      "max": 0.652466
+    },
+    "recall": {
+      "mean": 0.412529,
+      "std": 0.054969,
+      "min": 0.2752,
+      "max": 0.597058
+    },
+    "f1": {
+      "mean": 0.452294,
+      "std": 0.052257,
+      "min": 0.260703,
+      "max": 0.615792
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.46052,
+      "std": 0.070861,
+      "min": 0.250926,
+      "max": 0.672618
+    }
+  }
+}

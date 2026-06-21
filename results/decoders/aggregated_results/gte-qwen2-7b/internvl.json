@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "internvl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.634049,
+    "min": -0.002158,
+    "max": 0.843736,
+    "std": 0.094597
+  },
+  "timestamp": "2025-11-13T19:04:08.824660",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.558131,
+      "std": 0.060936,
+      "min": 0.258218,
+      "max": 0.683459
+    },
+    "recall": {
+      "mean": 0.571826,
+      "std": 0.069951,
+      "min": 0.160209,
+      "max": 0.69509
+    },
+    "f1": {
+      "mean": 0.563934,
+      "std": 0.063057,
+      "min": 0.20204,
+      "max": 0.677109
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.595226,
+      "std": 0.077609,
+      "min": 0.0,
+      "max": 0.738738
+    }
+  }
+}

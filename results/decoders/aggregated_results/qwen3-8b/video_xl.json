@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "video_xl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.618971,
+    "min": 0.252791,
+    "max": 0.797475,
+    "std": 0.076348
+  },
+  "timestamp": "2025-11-13T22:08:00.215068",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.654698,
+      "std": 0.035549,
+      "min": 0.42272,
+      "max": 0.727546
+    },
+    "recall": {
+      "mean": 0.645167,
+      "std": 0.040657,
+      "min": 0.391376,
+      "max": 0.726752
+    },
+    "f1": {
+      "mean": 0.649573,
+      "std": 0.035426,
+      "min": 0.406445,
+      "max": 0.718181
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.632414,
+      "std": 0.053877,
+      "min": 0.311711,
+      "max": 0.755754
+    }
+  }
+}

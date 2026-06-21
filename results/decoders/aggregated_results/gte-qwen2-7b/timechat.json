@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "timechat",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.580672,
+    "min": 0.295859,
+    "max": 0.761801,
+    "std": 0.071783
+  },
+  "timestamp": "2025-11-13T19:43:45.879745",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.571355,
+      "std": 0.048469,
+      "min": 0.398216,
+      "max": 0.700049
+    },
+    "recall": {
+      "mean": 0.538775,
+      "std": 0.046607,
+      "min": 0.368634,
+      "max": 0.64433
+    },
+    "f1": {
+      "mean": 0.553905,
+      "std": 0.043528,
+      "min": 0.3881,
+      "max": 0.671035
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.565512,
+      "std": 0.051469,
+      "min": 0.335759,
+      "max": 0.697455
+    }
+  }
+}

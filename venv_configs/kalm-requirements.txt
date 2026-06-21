@@ -1,0 +1,35 @@
+# KaLM CLIP-CC-Bench Specific Requirements
+# Core dependencies for CLIP-CC-Bench with KaLM-Embedding-Gemma3-12B-2511
+
+# Core ML/NLP
+torch>=2.0.0
+transformers>=4.40.0
+tokenizers>=0.15.0
+sentence-transformers>=2.7.0
+accelerate>=0.20.0
+numpy>=1.24.0
+pandas>=2.0.0
+datasets>=4.0.0
+
+# Flash Attention 2 (recommended for KaLM optimal performance)
+flash-attn>=2.5.6
+
+# Additional dependencies
+scikit-learn
+scipy
+matplotlib
+seaborn
+Pillow
+PyYAML>=6.0
+tqdm
+psutil
+nltk>=3.8.1
+
+# HuggingFace Hub
+huggingface-hub>=0.20.0
+
+# Development tools
+black
+flake8
+isort
+mypy

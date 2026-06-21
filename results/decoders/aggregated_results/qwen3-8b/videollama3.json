@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "videollama3",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.718419,
+    "min": 0.51179,
+    "max": 0.848,
+    "std": 0.058989
+  },
+  "timestamp": "2025-11-13T22:04:34.874168",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.693314,
+      "std": 0.035544,
+      "min": 0.587558,
+      "max": 0.794281
+    },
+    "recall": {
+      "mean": 0.689285,
+      "std": 0.038598,
+      "min": 0.581615,
+      "max": 0.817637
+    },
+    "f1": {
+      "mean": 0.690794,
+      "std": 0.032102,
+      "min": 0.60645,
+      "max": 0.7862
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.703534,
+      "std": 0.040817,
+      "min": 0.583134,
+      "max": 0.811254
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "llava_next_video",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.690007,
+    "min": 0.510252,
+    "max": 0.874923,
+    "std": 0.069609
+  },
+  "timestamp": "2025-11-13T22:23:43.672187",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.715162,
+      "std": 0.034341,
+      "min": 0.642128,
+      "max": 0.804641
+    },
+    "recall": {
+      "mean": 0.698862,
+      "std": 0.037296,
+      "min": 0.610715,
+      "max": 0.798984
+    },
+    "f1": {
+      "mean": 0.706571,
+      "std": 0.032233,
+      "min": 0.630788,
+      "max": 0.797953
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.697263,
+      "std": 0.049164,
+      "min": 0.568282,
+      "max": 0.831183
+    }
+  }
+}

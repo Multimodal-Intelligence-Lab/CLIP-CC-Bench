@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "mplug",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.629361,
+    "min": 0.264414,
+    "max": 0.879057,
+    "std": 0.129418
+  },
+  "timestamp": "2025-11-13T18:51:35.086822",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.49139,
+      "std": 0.072468,
+      "min": 0.312022,
+      "max": 0.718756
+    },
+    "recall": {
+      "mean": 0.441668,
+      "std": 0.063135,
+      "min": 0.262973,
+      "max": 0.627759
+    },
+    "f1": {
+      "mean": 0.463319,
+      "std": 0.060546,
+      "min": 0.307422,
+      "max": 0.616197
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.529083,
+      "std": 0.079793,
+      "min": 0.299455,
+      "max": 0.720499
+    }
+  }
+}

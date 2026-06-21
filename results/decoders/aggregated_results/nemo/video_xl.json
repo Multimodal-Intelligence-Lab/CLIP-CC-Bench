@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "video_xl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.559884,
+    "min": 0.109347,
+    "max": 0.748884,
+    "std": 0.087205
+  },
+  "timestamp": "2025-11-13T21:01:26.204938",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.496088,
+      "std": 0.04169,
+      "min": 0.326789,
+      "max": 0.577838
+    },
+    "recall": {
+      "mean": 0.491646,
+      "std": 0.050876,
+      "min": 0.250349,
+      "max": 0.60909
+    },
+    "f1": {
+      "mean": 0.493224,
+      "std": 0.043415,
+      "min": 0.283507,
+      "max": 0.582841
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.522198,
+      "std": 0.058762,
+      "min": 0.157823,
+      "max": 0.65083
+    }
+  }
+}

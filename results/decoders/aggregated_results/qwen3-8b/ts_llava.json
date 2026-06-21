@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "ts_llava",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.558649,
+    "min": 0.318714,
+    "max": 0.763024,
+    "std": 0.093799
+  },
+  "timestamp": "2025-11-13T21:56:48.363431",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.630272,
+      "std": 0.053942,
+      "min": 0.482892,
+      "max": 0.76272
+    },
+    "recall": {
+      "mean": 0.604585,
+      "std": 0.055808,
+      "min": 0.455154,
+      "max": 0.735509
+    },
+    "f1": {
+      "mean": 0.616662,
+      "std": 0.051986,
+      "min": 0.476448,
+      "max": 0.731553
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.58428,
+      "std": 0.072148,
+      "min": 0.401216,
+      "max": 0.729494
+    }
+  }
+}

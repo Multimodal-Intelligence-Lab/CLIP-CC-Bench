@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "sharegpt4",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.609038,
+    "min": 0.425149,
+    "max": 0.791425,
+    "std": 0.072129
+  },
+  "timestamp": "2025-11-13T21:51:00.131822",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.650801,
+      "std": 0.041788,
+      "min": 0.510863,
+      "max": 0.76023
+    },
+    "recall": {
+      "mean": 0.631118,
+      "std": 0.047098,
+      "min": 0.496741,
+      "max": 0.751275
+    },
+    "f1": {
+      "mean": 0.640072,
+      "std": 0.038942,
+      "min": 0.505675,
+      "max": 0.732313
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.623036,
+      "std": 0.052879,
+      "min": 0.486611,
+      "max": 0.747961
+    }
+  }
+}

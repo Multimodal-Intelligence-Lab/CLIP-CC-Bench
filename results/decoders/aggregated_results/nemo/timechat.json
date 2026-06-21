@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "timechat",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.515422,
+    "min": 0.28018,
+    "max": 0.706553,
+    "std": 0.080333
+  },
+  "timestamp": "2025-11-13T20:47:39.419513",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.514599,
+      "std": 0.053266,
+      "min": 0.352702,
+      "max": 0.662635
+    },
+    "recall": {
+      "mean": 0.466174,
+      "std": 0.050073,
+      "min": 0.320825,
+      "max": 0.576249
+    },
+    "f1": {
+      "mean": 0.488256,
+      "std": 0.047039,
+      "min": 0.336009,
+      "max": 0.600903
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.500102,
+      "std": 0.059578,
+      "min": 0.305565,
+      "max": 0.648791
+    }
+  }
+}

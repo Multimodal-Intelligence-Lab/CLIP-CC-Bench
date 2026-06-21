@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "llava_next_video",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.485041,
+    "min": 0.270717,
+    "max": 0.792954,
+    "std": 0.096029
+  },
+  "timestamp": "2025-11-13T20:10:25.747670",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.500527,
+      "std": 0.05097,
+      "min": 0.377906,
+      "max": 0.671114
+    },
+    "recall": {
+      "mean": 0.46887,
+      "std": 0.055371,
+      "min": 0.339368,
+      "max": 0.623164
+    },
+    "f1": {
+      "mean": 0.483234,
+      "std": 0.048813,
+      "min": 0.357602,
+      "max": 0.646187
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.481449,
+      "std": 0.067397,
+      "min": 0.317887,
+      "max": 0.712086
+    }
+  }
+}

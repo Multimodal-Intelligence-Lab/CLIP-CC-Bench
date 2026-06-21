@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "longva",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.617066,
+    "min": 0.420024,
+    "max": 0.811365,
+    "std": 0.080691
+  },
+  "timestamp": "2025-11-13T22:26:47.443953",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.664939,
+      "std": 0.043336,
+      "min": 0.539259,
+      "max": 0.774785
+    },
+    "recall": {
+      "mean": 0.657998,
+      "std": 0.042049,
+      "min": 0.55924,
+      "max": 0.758314
+    },
+    "f1": {
+      "mean": 0.660999,
+      "std": 0.039019,
+      "min": 0.567678,
+      "max": 0.754532
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.636557,
+      "std": 0.057035,
+      "min": 0.492401,
+      "max": 0.781917
+    }
+  }
+}

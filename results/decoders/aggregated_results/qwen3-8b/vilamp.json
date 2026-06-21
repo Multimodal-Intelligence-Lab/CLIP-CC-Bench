@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "vilamp",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.688872,
+    "min": 0.502926,
+    "max": 0.867595,
+    "std": 0.065279
+  },
+  "timestamp": "2025-11-13T22:13:45.768127",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.675786,
+      "std": 0.043238,
+      "min": 0.539214,
+      "max": 0.794819
+    },
+    "recall": {
+      "mean": 0.654444,
+      "std": 0.044457,
+      "min": 0.465234,
+      "max": 0.802351
+    },
+    "f1": {
+      "mean": 0.66433,
+      "std": 0.039057,
+      "min": 0.504683,
+      "max": 0.772513
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.675534,
+      "std": 0.047626,
+      "min": 0.505752,
+      "max": 0.803073
+    }
+  }
+}

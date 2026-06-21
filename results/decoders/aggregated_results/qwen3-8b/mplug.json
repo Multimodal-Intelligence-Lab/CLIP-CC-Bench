@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "mplug",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.704405,
+    "min": 0.504753,
+    "max": 0.831866,
+    "std": 0.065497
+  },
+  "timestamp": "2025-11-13T21:36:33.970665",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.697102,
+      "std": 0.043254,
+      "min": 0.559868,
+      "max": 0.815005
+    },
+    "recall": {
+      "mean": 0.668434,
+      "std": 0.038822,
+      "min": 0.574424,
+      "max": 0.769949
+    },
+    "f1": {
+      "mean": 0.681939,
+      "std": 0.036321,
+      "min": 0.584937,
+      "max": 0.776672
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.692128,
+      "std": 0.046719,
+      "min": 0.55493,
+      "max": 0.789106
+    }
+  }
+}

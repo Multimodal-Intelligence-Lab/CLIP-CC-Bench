@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "ts_llava",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.679752,
+    "min": 0.431066,
+    "max": 0.846813,
+    "std": 0.077757
+  },
+  "timestamp": "2025-11-13T22:38:35.687656",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.701056,
+      "std": 0.043376,
+      "min": 0.58002,
+      "max": 0.802854
+    },
+    "recall": {
+      "mean": 0.680787,
+      "std": 0.042576,
+      "min": 0.559188,
+      "max": 0.781764
+    },
+    "f1": {
+      "mean": 0.690483,
+      "std": 0.040532,
+      "min": 0.57781,
+      "max": 0.787834
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.684046,
+      "std": 0.057228,
+      "min": 0.501746,
+      "max": 0.807456
+    }
+  }
+}

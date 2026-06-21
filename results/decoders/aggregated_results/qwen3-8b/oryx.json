@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "oryx",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.556212,
+    "min": 0.250878,
+    "max": 0.77767,
+    "std": 0.091152
+  },
+  "timestamp": "2025-11-13T21:39:17.006859",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.644881,
+      "std": 0.052512,
+      "min": 0.384734,
+      "max": 0.755017
+    },
+    "recall": {
+      "mean": 0.579416,
+      "std": 0.052562,
+      "min": 0.4175,
+      "max": 0.705876
+    },
+    "f1": {
+      "mean": 0.6095,
+      "std": 0.047506,
+      "min": 0.400448,
+      "max": 0.72962
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.579731,
+      "std": 0.069608,
+      "min": 0.333184,
+      "max": 0.752879
+    }
+  }
+}

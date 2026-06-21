@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "oryx",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.666485,
+    "min": 0.433702,
+    "max": 0.838072,
+    "std": 0.074114
+  },
+  "timestamp": "2025-11-13T22:32:19.805650",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.711341,
+      "std": 0.043143,
+      "min": 0.526734,
+      "max": 0.814834
+    },
+    "recall": {
+      "mean": 0.654571,
+      "std": 0.04333,
+      "min": 0.544177,
+      "max": 0.770787
+    },
+    "f1": {
+      "mean": 0.681201,
+      "std": 0.038553,
+      "min": 0.535313,
+      "max": 0.79044
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.672716,
+      "std": 0.054084,
+      "min": 0.496796,
+      "max": 0.813559
+    }
+  }
+}

@@ -1,0 +1,52 @@
+# NV-Embed Isolated Embedding Model Configuration
+
+embedding_model:
+  name: "NV-Embed-v2"
+  path: "embedding_models/NV-Embed-v2"
+  type: "nvembed"
+  batch_size: 8             # Default from NV-Embed repo
+  max_length: 32768         # Default max context length
+  device_map: "auto"
+  trust_remote_code: true
+  additional_params:
+    instruction_for_retrieval: ""
+
+  # Fine-grained evaluation settings
+  fine_grained:
+    enabled: true           # Enable fine-grained embedding matching
+    chunking_method: "nltk" # Use NLTK sentence tokenizer for chunking
+
+processing:
+  device: "cuda:0"
+  clear_cache_interval: 25
+  progress_interval: 10
+
+data_paths:
+  # Use relative paths - will be resolved from base directory
+  ground_truth_file: "data/ground_truth/clip_cc_dataset.json"
+  predictions_dir: "data/models"
+  results_base_dir: "results"
+
+# Text generation models to evaluate
+models_to_evaluate:
+  - "internvl"
+  - "llava_next_video"
+  - "llava_one_vision"
+  - "longva"
+  - "longvu"
+  - "minicpm"
+  - "mplug"
+  - "oryx"
+  - "Qwen2.5-32B"
+  - "Qwen2.5-72B"
+  - "sharegpt4"
+  - "timechat"
+  - "ts_llava"
+  - "videochatflash"
+  - "videollama3"
+  - "video_xl"
+  - "vilamp"
+
+logging:
+  level: "INFO"
+  log_prefix: "nv_embed_evaluation"

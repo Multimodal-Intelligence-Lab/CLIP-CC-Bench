@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "llava_one_vision",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.643831,
+    "min": 0.482695,
+    "max": 0.824168,
+    "std": 0.071697
+  },
+  "timestamp": "2025-11-13T18:47:41.016346",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.479534,
+      "std": 0.064277,
+      "min": 0.328114,
+      "max": 0.681415
+    },
+    "recall": {
+      "mean": 0.41631,
+      "std": 0.064325,
+      "min": 0.275629,
+      "max": 0.640652
+    },
+    "f1": {
+      "mean": 0.443619,
+      "std": 0.056811,
+      "min": 0.314144,
+      "max": 0.624337
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.52392,
+      "std": 0.058021,
+      "min": 0.384959,
+      "max": 0.677637
+    }
+  }
+}

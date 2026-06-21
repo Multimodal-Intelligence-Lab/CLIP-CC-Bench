@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "Qwen2.5-32B",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.663584,
+    "min": 0.517407,
+    "max": 0.801206,
+    "std": 0.058506
+  },
+  "timestamp": "2025-11-13T19:33:23.013628",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.563134,
+      "std": 0.042559,
+      "min": 0.364878,
+      "max": 0.660239
+    },
+    "recall": {
+      "mean": 0.580635,
+      "std": 0.044036,
+      "min": 0.454924,
+      "max": 0.707849
+    },
+    "f1": {
+      "mean": 0.570878,
+      "std": 0.037107,
+      "min": 0.411009,
+      "max": 0.658537
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.612757,
+      "std": 0.040209,
+      "min": 0.468104,
+      "max": 0.713493
+    }
+  }
+}

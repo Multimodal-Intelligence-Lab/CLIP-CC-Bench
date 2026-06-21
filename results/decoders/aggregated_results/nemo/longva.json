@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "longva",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.406182,
+    "min": 0.137504,
+    "max": 0.717133,
+    "std": 0.095892
+  },
+  "timestamp": "2025-11-13T20:18:36.185893",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.412203,
+      "std": 0.063151,
+      "min": 0.239999,
+      "max": 0.595583
+    },
+    "recall": {
+      "mean": 0.4044,
+      "std": 0.064342,
+      "min": 0.231464,
+      "max": 0.574496
+    },
+    "f1": {
+      "mean": 0.407081,
+      "std": 0.05987,
+      "min": 0.235655,
+      "max": 0.557353
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.403452,
+      "std": 0.072536,
+      "min": 0.183131,
+      "max": 0.607094
+    }
+  }
+}

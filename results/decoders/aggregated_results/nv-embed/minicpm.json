@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "minicpm",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.595884,
+    "min": 0.366373,
+    "max": 0.78149,
+    "std": 0.073948
+  },
+  "timestamp": "2025-11-13T18:50:31.933052",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.422612,
+      "std": 0.055803,
+      "min": 0.283242,
+      "max": 0.557957
+    },
+    "recall": {
+      "mean": 0.386876,
+      "std": 0.058312,
+      "min": 0.242857,
+      "max": 0.594142
+    },
+    "f1": {
+      "mean": 0.402172,
+      "std": 0.05071,
+      "min": 0.277314,
+      "max": 0.550574
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.478955,
+      "std": 0.055088,
+      "min": 0.323072,
+      "max": 0.640004
+    }
+  }
+}

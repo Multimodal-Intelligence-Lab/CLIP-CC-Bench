@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "videochatflash",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.73565,
+    "min": 0.538718,
+    "max": 0.849294,
+    "std": 0.063075
+  },
+  "timestamp": "2025-11-13T22:39:48.615664",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.744059,
+      "std": 0.036264,
+      "min": 0.62773,
+      "max": 0.861491
+    },
+    "recall": {
+      "mean": 0.696885,
+      "std": 0.035128,
+      "min": 0.590629,
+      "max": 0.782459
+    },
+    "f1": {
+      "mean": 0.719379,
+      "std": 0.032307,
+      "min": 0.616231,
+      "max": 0.804165
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.726659,
+      "std": 0.044309,
+      "min": 0.606,
+      "max": 0.817631
+    }
+  }
+}

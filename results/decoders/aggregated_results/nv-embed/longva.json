@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "longva",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.399148,
+    "min": 0.179665,
+    "max": 0.701773,
+    "std": 0.104873
+  },
+  "timestamp": "2025-11-13T18:48:49.629056",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.338827,
+      "std": 0.070745,
+      "min": 0.159152,
+      "max": 0.556073
+    },
+    "recall": {
+      "mean": 0.293169,
+      "std": 0.078072,
+      "min": 0.110974,
+      "max": 0.516131
+    },
+    "f1": {
+      "mean": 0.311208,
+      "std": 0.068867,
+      "min": 0.140093,
+      "max": 0.48748
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.345675,
+      "std": 0.076087,
+      "min": 0.164683,
+      "max": 0.57532
+    }
+  }
+}

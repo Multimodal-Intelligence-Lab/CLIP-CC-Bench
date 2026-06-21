@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "sharegpt4",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.547145,
+    "min": 0.357086,
+    "max": 0.825527,
+    "std": 0.084168
+  },
+  "timestamp": "2025-11-13T20:45:02.731849",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.489728,
+      "std": 0.051435,
+      "min": 0.348503,
+      "max": 0.631616
+    },
+    "recall": {
+      "mean": 0.467781,
+      "std": 0.057568,
+      "min": 0.309629,
+      "max": 0.623082
+    },
+    "f1": {
+      "mean": 0.477413,
+      "std": 0.049776,
+      "min": 0.327918,
+      "max": 0.604138
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.508303,
+      "std": 0.059973,
+      "min": 0.354354,
+      "max": 0.67705
+    }
+  }
+}

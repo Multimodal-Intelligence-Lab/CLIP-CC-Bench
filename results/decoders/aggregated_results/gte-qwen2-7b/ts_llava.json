@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "ts_llava",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.544511,
+    "min": 0.303468,
+    "max": 0.797939,
+    "std": 0.095331
+  },
+  "timestamp": "2025-11-13T19:46:43.474069",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.518957,
+      "std": 0.056942,
+      "min": 0.353963,
+      "max": 0.65256
+    },
+    "recall": {
+      "mean": 0.512292,
+      "std": 0.062171,
+      "min": 0.33333,
+      "max": 0.643654
+    },
+    "f1": {
+      "mean": 0.514843,
+      "std": 0.056496,
+      "min": 0.359963,
+      "max": 0.647974
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.527178,
+      "std": 0.070016,
+      "min": 0.336337,
+      "max": 0.702979
+    }
+  }
+}

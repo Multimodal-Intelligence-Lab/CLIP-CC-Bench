@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "minicpm",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.776146,
+    "min": 0.580869,
+    "max": 0.884496,
+    "std": 0.04836
+  },
+  "timestamp": "2025-11-13T22:29:34.356337",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.706284,
+      "std": 0.029659,
+      "min": 0.612433,
+      "max": 0.770494
+    },
+    "recall": {
+      "mean": 0.702788,
+      "std": 0.030858,
+      "min": 0.619548,
+      "max": 0.796433
+    },
+    "f1": {
+      "mean": 0.704234,
+      "std": 0.026552,
+      "min": 0.61789,
+      "max": 0.770201
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.737949,
+      "std": 0.032717,
+      "min": 0.607607,
+      "max": 0.815862
+    }
+  }
+}

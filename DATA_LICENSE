@@ -1,0 +1,18 @@
+# Data License
+
+The evaluation **code** in this repository is released under the MIT License
+(see `LICENSE`).
+
+The **human-written reference summaries and metadata** in
+`data/ground_truth/clip_cc_dataset.json` are released under the
+**Creative Commons Attribution 4.0 International License (CC-BY-4.0)**:
+https://creativecommons.org/licenses/by/4.0/
+
+The dataset references publicly available source videos by URL only. The
+linked videos remain the property of their original copyright holders; this
+benchmark does **not** host or redistribute any video content. Users are
+responsible for complying with the terms of the respective video platforms.
+
+The model-generated descriptions in `data/models/` are outputs of the
+respective third-party video-language models, included here for reproducibility
+of the benchmark results.

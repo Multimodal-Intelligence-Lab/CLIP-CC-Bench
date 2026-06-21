@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "llava_one_vision",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.699459,
+    "min": 0.524578,
+    "max": 0.854239,
+    "std": 0.058858
+  },
+  "timestamp": "2025-11-13T19:10:30.453569",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.630753,
+      "std": 0.048914,
+      "min": 0.481073,
+      "max": 0.738805
+    },
+    "recall": {
+      "mean": 0.602232,
+      "std": 0.046126,
+      "min": 0.488954,
+      "max": 0.754898
+    },
+    "f1": {
+      "mean": 0.615231,
+      "std": 0.041069,
+      "min": 0.510251,
+      "max": 0.727973
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.653768,
+      "std": 0.043535,
+      "min": 0.551663,
+      "max": 0.777473
+    }
+  }
+}

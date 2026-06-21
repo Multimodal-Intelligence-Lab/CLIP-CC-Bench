@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "minicpm",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.609177,
+    "min": 0.318338,
+    "max": 0.771472,
+    "std": 0.068263
+  },
+  "timestamp": "2025-11-13T20:26:08.226368",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.469067,
+      "std": 0.040349,
+      "min": 0.347699,
+      "max": 0.566907
+    },
+    "recall": {
+      "mean": 0.46937,
+      "std": 0.044764,
+      "min": 0.36535,
+      "max": 0.608863
+    },
+    "f1": {
+      "mean": 0.468506,
+      "std": 0.038432,
+      "min": 0.364478,
+      "max": 0.587137
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.528609,
+      "std": 0.045884,
+      "min": 0.34247,
+      "max": 0.666799
+    }
+  }
+}

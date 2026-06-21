@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "sharegpt4",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.551065,
+    "min": 0.159941,
+    "max": 0.800104,
+    "std": 0.113004
+  },
+  "timestamp": "2025-11-13T18:54:44.667762",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.429289,
+      "std": 0.064579,
+      "min": 0.226048,
+      "max": 0.66668
+    },
+    "recall": {
+      "mean": 0.381654,
+      "std": 0.073177,
+      "min": 0.183474,
+      "max": 0.59557
+    },
+    "f1": {
+      "mean": 0.401237,
+      "std": 0.060906,
+      "min": 0.208843,
+      "max": 0.564341
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.461091,
+      "std": 0.077037,
+      "min": 0.183022,
+      "max": 0.634337
+    }
+  }
+}

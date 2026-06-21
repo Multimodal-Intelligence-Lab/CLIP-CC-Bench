@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "videochatflash",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.53965,
+    "min": 0.100888,
+    "max": 0.730992,
+    "std": 0.108999
+  },
+  "timestamp": "2025-11-13T18:56:52.222260",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.456848,
+      "std": 0.071096,
+      "min": 0.260557,
+      "max": 0.754155
+    },
+    "recall": {
+      "mean": 0.359453,
+      "std": 0.065128,
+      "min": 0.188762,
+      "max": 0.587122
+    },
+    "f1": {
+      "mean": 0.399893,
+      "std": 0.061111,
+      "min": 0.250763,
+      "max": 0.612767
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.454932,
+      "std": 0.077498,
+      "min": 0.157314,
+      "max": 0.665593
+    }
+  }
+}

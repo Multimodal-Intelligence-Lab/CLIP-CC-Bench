@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "timechat",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.716037,
+    "min": 0.481609,
+    "max": 0.861454,
+    "std": 0.061085
+  },
+  "timestamp": "2025-11-13T22:37:27.515259",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.723486,
+      "std": 0.036609,
+      "min": 0.600692,
+      "max": 0.805579
+    },
+    "recall": {
+      "mean": 0.693482,
+      "std": 0.034955,
+      "min": 0.575656,
+      "max": 0.788653
+    },
+    "f1": {
+      "mean": 0.707848,
+      "std": 0.032478,
+      "min": 0.587908,
+      "max": 0.786532
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.711318,
+      "std": 0.044517,
+      "min": 0.529476,
+      "max": 0.819334
+    }
+  }
+}

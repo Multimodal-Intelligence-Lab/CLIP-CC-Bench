@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "longva",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.492007,
+    "min": 0.241111,
+    "max": 0.759921,
+    "std": 0.101022
+  },
+  "timestamp": "2025-11-13T21:23:36.934256",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.572126,
+      "std": 0.05683,
+      "min": 0.430769,
+      "max": 0.688859
+    },
+    "recall": {
+      "mean": 0.570932,
+      "std": 0.059666,
+      "min": 0.422076,
+      "max": 0.713988
+    },
+    "f1": {
+      "mean": 0.570798,
+      "std": 0.054506,
+      "min": 0.43124,
+      "max": 0.683799
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.525811,
+      "std": 0.079256,
+      "min": 0.309293,
+      "max": 0.715958
+    }
+  }
+}

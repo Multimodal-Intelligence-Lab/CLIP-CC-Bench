@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "videollama3",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.681201,
+    "min": 0.25264,
+    "max": 0.855893,
+    "std": 0.096962
+  },
+  "timestamp": "2025-11-13T18:57:52.394544",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.469699,
+      "std": 0.076263,
+      "min": 0.0,
+      "max": 0.650102
+    },
+    "recall": {
+      "mean": 0.464579,
+      "std": 0.078968,
+      "min": 0.0,
+      "max": 0.643687
+    },
+    "f1": {
+      "mean": 0.465348,
+      "std": 0.07196,
+      "min": 0.0,
+      "max": 0.645825
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.548887,
+      "std": 0.082456,
+      "min": 0.0,
+      "max": 0.717613
+    }
+  }
+}

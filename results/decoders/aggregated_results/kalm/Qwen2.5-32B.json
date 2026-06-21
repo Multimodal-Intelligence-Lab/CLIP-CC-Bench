@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "Qwen2.5-32B",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.769423,
+    "min": 0.633278,
+    "max": 0.904417,
+    "std": 0.048328
+  },
+  "timestamp": "2025-11-13T22:33:32.051401",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.721563,
+      "std": 0.030993,
+      "min": 0.600881,
+      "max": 0.80457
+    },
+    "recall": {
+      "mean": 0.71552,
+      "std": 0.032641,
+      "min": 0.619919,
+      "max": 0.823375
+    },
+    "f1": {
+      "mean": 0.718176,
+      "std": 0.027532,
+      "min": 0.628836,
+      "max": 0.785052
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.742434,
+      "std": 0.033615,
+      "min": 0.634157,
+      "max": 0.840518
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "videochatflash",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.671677,
+    "min": 0.453614,
+    "max": 0.791727,
+    "std": 0.064337
+  },
+  "timestamp": "2025-11-13T22:00:06.687214",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.680965,
+      "std": 0.04418,
+      "min": 0.553133,
+      "max": 0.826798
+    },
+    "recall": {
+      "mean": 0.612911,
+      "std": 0.041189,
+      "min": 0.480429,
+      "max": 0.751167
+    },
+    "f1": {
+      "mean": 0.644591,
+      "std": 0.038178,
+      "min": 0.526853,
+      "max": 0.771314
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.656756,
+      "std": 0.04541,
+      "min": 0.52052,
+      "max": 0.76903
+    }
+  }
+}

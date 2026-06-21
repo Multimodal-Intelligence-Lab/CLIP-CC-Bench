@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "mplug",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.73621,
+    "min": 0.562558,
+    "max": 0.872623,
+    "std": 0.058009
+  },
+  "timestamp": "2025-11-13T19:27:33.843049",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.65495,
+      "std": 0.050423,
+      "min": 0.494627,
+      "max": 0.768038
+    },
+    "recall": {
+      "mean": 0.6264,
+      "std": 0.044869,
+      "min": 0.507291,
+      "max": 0.750578
+    },
+    "f1": {
+      "mean": 0.639556,
+      "std": 0.041996,
+      "min": 0.51544,
+      "max": 0.751918
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.683716,
+      "std": 0.04393,
+      "min": 0.557128,
+      "max": 0.807786
+    }
+  }
+}

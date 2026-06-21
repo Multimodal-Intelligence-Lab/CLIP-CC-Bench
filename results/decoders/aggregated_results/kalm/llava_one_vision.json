@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "llava_one_vision",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.790689,
+    "min": 0.66569,
+    "max": 0.897831,
+    "std": 0.049475
+  },
+  "timestamp": "2025-11-13T22:24:51.591413",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.751575,
+      "std": 0.034797,
+      "min": 0.668515,
+      "max": 0.850703
+    },
+    "recall": {
+      "mean": 0.725243,
+      "std": 0.035269,
+      "min": 0.644832,
+      "max": 0.838124
+    },
+    "f1": {
+      "mean": 0.737819,
+      "std": 0.031008,
+      "min": 0.659096,
+      "max": 0.827427
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.762927,
+      "std": 0.036495,
+      "min": 0.66814,
+      "max": 0.851009
+    }
+  }
+}

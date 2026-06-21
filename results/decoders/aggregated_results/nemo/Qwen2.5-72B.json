@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "Qwen2.5-72B",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.629294,
+    "min": 0.402619,
+    "max": 0.81342,
+    "std": 0.083218
+  },
+  "timestamp": "2025-11-13T20:39:52.188129",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.523406,
+      "std": 0.051368,
+      "min": 0.364413,
+      "max": 0.65107
+    },
+    "recall": {
+      "mean": 0.485993,
+      "std": 0.052079,
+      "min": 0.338709,
+      "max": 0.683794
+    },
+    "f1": {
+      "mean": 0.503116,
+      "std": 0.047375,
+      "min": 0.351091,
+      "max": 0.653765
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.557895,
+      "std": 0.057757,
+      "min": 0.392707,
+      "max": 0.68708
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "timechat",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.59257,
+    "min": 0.337541,
+    "max": 0.801831,
+    "std": 0.07395
+  },
+  "timestamp": "2025-11-13T21:53:43.104596",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.642599,
+      "std": 0.043881,
+      "min": 0.535716,
+      "max": 0.755365
+    },
+    "recall": {
+      "mean": 0.600624,
+      "std": 0.04149,
+      "min": 0.495654,
+      "max": 0.72238
+    },
+    "f1": {
+      "mean": 0.620342,
+      "std": 0.038285,
+      "min": 0.523376,
+      "max": 0.727001
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.604714,
+      "std": 0.053716,
+      "min": 0.410402,
+      "max": 0.745854
+    }
+  }
+}

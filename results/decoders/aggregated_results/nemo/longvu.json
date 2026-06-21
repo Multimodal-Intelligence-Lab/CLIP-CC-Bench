@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "longvu",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.625153,
+    "min": 0.357076,
+    "max": 0.823305,
+    "std": 0.079738
+  },
+  "timestamp": "2025-11-13T20:22:40.879979",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.526019,
+      "std": 0.055838,
+      "min": 0.375961,
+      "max": 0.694412
+    },
+    "recall": {
+      "mean": 0.495238,
+      "std": 0.052453,
+      "min": 0.35949,
+      "max": 0.625957
+    },
+    "f1": {
+      "mean": 0.508724,
+      "std": 0.04654,
+      "min": 0.382305,
+      "max": 0.644408
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.559546,
+      "std": 0.055465,
+      "min": 0.39328,
+      "max": 0.722954
+    }
+  }
+}

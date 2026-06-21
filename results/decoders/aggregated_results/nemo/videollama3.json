@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "videollama3",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.678662,
+    "min": 0.503254,
+    "max": 0.852181,
+    "std": 0.070418
+  },
+  "timestamp": "2025-11-13T20:58:09.137606",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.57463,
+      "std": 0.044599,
+      "min": 0.466344,
+      "max": 0.715153
+    },
+    "recall": {
+      "mean": 0.575877,
+      "std": 0.045444,
+      "min": 0.463106,
+      "max": 0.732275
+    },
+    "f1": {
+      "mean": 0.574433,
+      "std": 0.039321,
+      "min": 0.471651,
+      "max": 0.704919
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.621016,
+      "std": 0.046462,
+      "min": 0.511583,
+      "max": 0.735911
+    }
+  }
+}

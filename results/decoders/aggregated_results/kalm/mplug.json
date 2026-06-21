@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "mplug",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.789523,
+    "min": 0.61878,
+    "max": 0.931976,
+    "std": 0.072517
+  },
+  "timestamp": "2025-11-13T22:31:18.029261",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.762443,
+      "std": 0.037106,
+      "min": 0.648515,
+      "max": 0.876675
+    },
+    "recall": {
+      "mean": 0.739478,
+      "std": 0.034012,
+      "min": 0.647913,
+      "max": 0.82328
+    },
+    "f1": {
+      "mean": 0.750473,
+      "std": 0.031991,
+      "min": 0.659917,
+      "max": 0.819909
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.768328,
+      "std": 0.04665,
+      "min": 0.647653,
+      "max": 0.860674
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "internvl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.735152,
+    "min": 0.29328,
+    "max": 0.889259,
+    "std": 0.071817
+  },
+  "timestamp": "2025-11-13T22:22:19.913764",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.706269,
+      "std": 0.037471,
+      "min": 0.54258,
+      "max": 0.817212
+    },
+    "recall": {
+      "mean": 0.706118,
+      "std": 0.042045,
+      "min": 0.444748,
+      "max": 0.805657
+    },
+    "f1": {
+      "mean": 0.705849,
+      "std": 0.037002,
+      "min": 0.488817,
+      "max": 0.790433
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.719341,
+      "std": 0.052229,
+      "min": 0.366605,
+      "max": 0.836939
+    }
+  }
+}

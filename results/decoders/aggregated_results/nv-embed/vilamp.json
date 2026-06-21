@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "vilamp",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.60175,
+    "min": 0.182443,
+    "max": 0.825856,
+    "std": 0.135229
+  },
+  "timestamp": "2025-11-13T18:59:53.191509",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.45859,
+      "std": 0.072574,
+      "min": 0.215918,
+      "max": 0.680057
+    },
+    "recall": {
+      "mean": 0.426548,
+      "std": 0.068952,
+      "min": 0.189895,
+      "max": 0.686441
+    },
+    "f1": {
+      "mean": 0.439722,
+      "std": 0.063618,
+      "min": 0.243335,
+      "max": 0.62654
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.500101,
+      "std": 0.079027,
+      "min": 0.216006,
+      "max": 0.677033
+    }
+  }
+}

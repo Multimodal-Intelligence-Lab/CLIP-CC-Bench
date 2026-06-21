@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "longva",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.502976,
+    "min": 0.219363,
+    "max": 0.736105,
+    "std": 0.097613
+  },
+  "timestamp": "2025-11-13T19:15:25.439268",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.458555,
+      "std": 0.070679,
+      "min": 0.284432,
+      "max": 0.665979
+    },
+    "recall": {
+      "mean": 0.469872,
+      "std": 0.070168,
+      "min": 0.295101,
+      "max": 0.63858
+    },
+    "f1": {
+      "mean": 0.463004,
+      "std": 0.066845,
+      "min": 0.303615,
+      "max": 0.622487
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.480085,
+      "std": 0.07662,
+      "min": 0.260858,
+      "max": 0.664535
+    }
+  }
+}

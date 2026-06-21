@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "vilamp",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.708912,
+    "min": 0.47605,
+    "max": 0.857488,
+    "std": 0.068061
+  },
+  "timestamp": "2025-11-13T20:02:33.857659",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.63095,
+      "std": 0.059706,
+      "min": 0.398302,
+      "max": 0.806045
+    },
+    "recall": {
+      "mean": 0.615703,
+      "std": 0.054586,
+      "min": 0.378605,
+      "max": 0.794549
+    },
+    "f1": {
+      "mean": 0.622333,
+      "std": 0.051742,
+      "min": 0.388203,
+      "max": 0.757513
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.661691,
+      "std": 0.053041,
+      "min": 0.442177,
+      "max": 0.762608
+    }
+  }
+}

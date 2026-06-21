@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "llava_one_vision",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.649396,
+    "min": 0.430054,
+    "max": 0.81825,
+    "std": 0.072864
+  },
+  "timestamp": "2025-11-13T20:13:23.908807",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.560128,
+      "std": 0.053078,
+      "min": 0.427871,
+      "max": 0.702687
+    },
+    "recall": {
+      "mean": 0.514035,
+      "std": 0.052525,
+      "min": 0.396441,
+      "max": 0.713612
+    },
+    "f1": {
+      "mean": 0.535039,
+      "std": 0.047109,
+      "min": 0.415151,
+      "max": 0.694721
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.585492,
+      "std": 0.052796,
+      "min": 0.422472,
+      "max": 0.709558
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "vilamp",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.77993,
+    "min": 0.615935,
+    "max": 0.903494,
+    "std": 0.067531
+  },
+  "timestamp": "2025-11-13T22:44:51.802204",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.75465,
+      "std": 0.037197,
+      "min": 0.636773,
+      "max": 0.864903
+    },
+    "recall": {
+      "mean": 0.739375,
+      "std": 0.037811,
+      "min": 0.607325,
+      "max": 0.868085
+    },
+    "f1": {
+      "mean": 0.746612,
+      "std": 0.0341,
+      "min": 0.621701,
+      "max": 0.838239
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.761775,
+      "std": 0.044125,
+      "min": 0.629907,
+      "max": 0.846868
+    }
+  }
+}

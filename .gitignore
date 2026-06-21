@@ -1,0 +1,212 @@
+# CLIP-CC-Bench .gitignore
+
+# ============================================================================
+# Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ============================================================================
+# Virtual Environments (NEW - centralized)
+# ============================================================================
+# These are now outside the repo in parent directory, but ignore if someone copies them
+venv/
+venv_*/
+# Exception: track venv_configs/ directory (contains setup scripts and requirements)
+!venv_configs/
+.venv/
+env/
+ENV/
+
+
+# Embedding models - track directory structure but ignore model weights
+# Track: embedding_models/ directory, subdirectories, and .gitkeep/README.md files
+# Ignore: all downloaded model files (.bin, .safetensors, config.json, etc.)
+!embedding_models/
+!embedding_models/*/
+!embedding_models/*/.gitkeep
+!embedding_models/README.md
+# Ignore all model files inside subdirectories
+embedding_models/*/*.bin
+embedding_models/*/*.safetensors
+embedding_models/*/*.pt
+embedding_models/*/*.pth
+embedding_models/*/*.ckpt
+embedding_models/*/*.h5
+embedding_models/*/*.msgpack
+embedding_models/*/*.onnx
+embedding_models/*/*.json
+embedding_models/*/*.txt
+embedding_models/*/*.model
+embedding_models/*/*.py
+embedding_models/*/*.md
+embedding_models/*/*/
+
+# ============================================================================
+# Data Files
+# ============================================================================
+# Allow data/ground_truth and data/models to be uploaded to GitHub
+# Ignore other large data directories
+
+data/cache/
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# But keep example/small files
+!data/ground_truth/.gitkeep
+!data/models/.gitkeep
+!**/example_*.json
+!**/sample_*.json
+
+# ============================================================================
+# Results & Outputs
+# ============================================================================
+# Allow CSV and JSON result files to be uploaded
+# Ignore other file types in results directory
+!results/
+!results/**/*.csv
+!results/**/*.json
+!results/.gitkeep
+!results/encoders/
+!results/encoders/.gitkeep
+!results/embedding_models/
+!results/embedding_models/**
+
+outputs/
+logs/
+*.log
+
+# ============================================================================
+# Model Checkpoints & Weights
+# ============================================================================
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+checkpoint*/
+model_*/
+
+# ============================================================================
+# Jupyter Notebooks
+# ============================================================================
+.ipynb_checkpoints/
+*.ipynb
+
+# Keep notebooks but not outputs
+# If you want to version notebooks, use nbstripout
+
+# ============================================================================
+# IDE & Editors
+# ============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ============================================================================
+# SLURM & HPC
+# ============================================================================
+slurm_logs/*.out
+slurm_logs/*.err
+*.out
+*.err
+# Keep slurm scripts
+!slurm_scripts/*.sh
+!slurm_scripts/*.sbatch
+
+# ============================================================================
+# Temporary & Cache Files
+# ============================================================================
+tmp/
+temp/
+*.tmp
+.cache/
+*.cache
+wandb/
+mlruns/
+
+# ============================================================================
+# LaTeX
+# ============================================================================
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.pdf
+# Keep specific PDFs if needed
+!paper.pdf
+!supplementary.pdf
+
+# ============================================================================
+# OS & System Files
+# ============================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================================
+# Archives & Compressed Files
+# ============================================================================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ============================================================================
+# Environment & Secrets
+# ============================================================================
+.env
+.env.local
+.env.*.local
+secrets/
+credentials/
+*.pem
+*.key
+api_keys.txt
+
+# ============================================================================
+# HuggingFace Cache
+# ============================================================================
+.huggingface/
+transformers_cache/
+sentence_transformers_cache/
+
+# ============================================================================
+# Legacy & Backups
+# ============================================================================
+legacy/
+backup/
+old/
+*.backup
+*.bak
+
+# Preprocessing backups (keep local, don't commit)
+data/models_backup/
+
+# ============================================================================
+# Specific Large Files to Ignore
+# ============================================================================
+# Add specific large files if needed
+# e.g., *.mp4, *.avi for video files if they end up in repo
+

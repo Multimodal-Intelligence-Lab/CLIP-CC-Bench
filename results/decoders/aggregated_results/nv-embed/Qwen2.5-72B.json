@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "Qwen2.5-72B",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.587497,
+    "min": 0.308808,
+    "max": 0.786099,
+    "std": 0.085547
+  },
+  "timestamp": "2025-11-13T18:53:39.122066",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.470809,
+      "std": 0.062162,
+      "min": 0.272493,
+      "max": 0.614461
+    },
+    "recall": {
+      "mean": 0.405545,
+      "std": 0.062137,
+      "min": 0.25834,
+      "max": 0.611575
+    },
+    "f1": {
+      "mean": 0.433877,
+      "std": 0.055997,
+      "min": 0.265228,
+      "max": 0.60951
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.497438,
+      "std": 0.062405,
+      "min": 0.305704,
+      "max": 0.65258
+    }
+  }
+}

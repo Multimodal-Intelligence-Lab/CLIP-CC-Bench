@@ -1,0 +1,45 @@
+# GTE CLIP-CC-Bench Specific Requirements
+# Core dependencies for CLIP-CC-Bench with GTE
+
+# Core ML/NLP
+torch>=2.0.0
+transformers>=4.51.3
+tokenizers>=0.15.0
+sentence-transformers>=3.1.1
+accelerate>=0.20.0
+einops>=0.8.0
+numpy>=1.24.0
+pandas>=2.0.0
+datasets>=4.0.0
+
+# NLP Tools
+nltk>=3.8.1
+mosestokenizer
+contractions
+regex
+
+# Additional dependencies
+scikit-learn
+scipy
+Pillow
+PyYAML>=6.0
+tqdm
+psutil
+adapters
+safetensors
+
+# HuggingFace Hub
+huggingface-hub>=0.20.0
+
+# Development tools
+black
+flake8
+isort
+mypy
+
+# Utility
+prettytable
+textsearch
+pyahocorasick
+uctools
+toolwrapper

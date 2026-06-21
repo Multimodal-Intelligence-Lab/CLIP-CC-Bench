@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "llava_one_vision",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.677887,
+    "min": 0.508083,
+    "max": 0.829941,
+    "std": 0.066122
+  },
+  "timestamp": "2025-11-13T21:18:13.661103",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.687013,
+      "std": 0.041466,
+      "min": 0.54483,
+      "max": 0.828447
+    },
+    "recall": {
+      "mean": 0.651747,
+      "std": 0.04162,
+      "min": 0.516628,
+      "max": 0.801744
+    },
+    "f1": {
+      "mean": 0.668275,
+      "std": 0.036021,
+      "min": 0.543658,
+      "max": 0.783162
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.672121,
+      "std": 0.046985,
+      "min": 0.554097,
+      "max": 0.793036
+    }
+  }
+}

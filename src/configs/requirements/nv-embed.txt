@@ -1,0 +1,37 @@
+# NV-Embed Specific Requirements
+# Pin versions for compatibility with NV-Embed model
+
+torch==2.4.0
+transformers==4.44.2
+tokenizers==0.19.1
+sentence-transformers==3.1.1
+numpy>=1.21.0
+datasets>=2.19.0
+accelerate>=0.20.1
+sentencepiece
+protobuf
+peft
+einops
+ir-datasets
+lz4
+warc3-wet
+warc3-wet-clueweb09
+zlib-state
+ijson
+unlzw3
+
+# Additional dependencies
+scikit-learn
+scipy
+Pillow
+PyYAML>=6.0
+tqdm
+pandas
+psutil
+nltk>=3.8.1
+
+# HuggingFace Hub
+huggingface-hub>=0.21.0
+safetensors>=0.4.3
+
+# CUDA support (automatically handled by torch)

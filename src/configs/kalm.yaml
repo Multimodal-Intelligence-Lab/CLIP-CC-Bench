@@ -1,0 +1,52 @@
+# KaLM-Embedding-Gemma3-12B-2511 Isolated Embedding Model Configuration
+
+embedding_model:
+  name: "KaLM-Embedding-Gemma3-12B-2511"
+  path: "embedding_models/KaLM-Embedding-Gemma3-12B-2511"
+  type: "kalm"
+  batch_size: 8
+  max_length: 32768        # KaLM supports up to 32k tokens (512 recommended for optimal performance)
+  trust_remote_code: true
+  additional_params:
+    torch_dtype: "bfloat16"            # BF16 as per official recommendation
+    attn_implementation: "eager"  # Use "eager" (flash_attention_2 not available)
+
+  # Fine-grained evaluation settings
+  fine_grained:
+    enabled: true           # Enable fine-grained embedding matching
+    chunking_method: "nltk" # Use NLTK sentence tokenizer for chunking
+
+processing:
+  device: "cuda:0"
+  clear_cache_interval: 25
+  progress_interval: 10
+
+data_paths:
+  # Use relative paths - will be resolved from base directory
+  ground_truth_file: "data/ground_truth/clip_cc_dataset.json"
+  predictions_dir: "data/models"
+  results_base_dir: "results"
+
+# Text generation models to evaluate
+models_to_evaluate:
+  - "internvl"
+  - "llava_next_video"
+  - "llava_one_vision"
+  - "longva"
+  - "longvu"
+  - "minicpm"
+  - "mplug"
+  - "oryx"
+  - "Qwen2.5-32B"
+  - "Qwen2.5-72B"
+  - "sharegpt4"
+  - "timechat"
+  - "ts_llava"
+  - "videochatflash"
+  - "videollama3"
+  - "video_xl"
+  - "vilamp"
+
+logging:
+  level: "INFO"
+  log_prefix: "kalm_evaluation"

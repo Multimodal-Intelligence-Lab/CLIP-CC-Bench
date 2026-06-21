@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "minicpm",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.658514,
+    "min": 0.461364,
+    "max": 0.796003,
+    "std": 0.057261
+  },
+  "timestamp": "2025-11-13T21:31:25.375622",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.643051,
+      "std": 0.032826,
+      "min": 0.538482,
+      "max": 0.717301
+    },
+    "recall": {
+      "mean": 0.642534,
+      "std": 0.034244,
+      "min": 0.529105,
+      "max": 0.747515
+    },
+    "f1": {
+      "mean": 0.642371,
+      "std": 0.02923,
+      "min": 0.546182,
+      "max": 0.723723
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.649453,
+      "std": 0.038245,
+      "min": 0.509226,
+      "max": 0.744935
+    }
+  }
+}

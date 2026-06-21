@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "timechat",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.526491,
+    "min": 0.227558,
+    "max": 0.80902,
+    "std": 0.09238
+  },
+  "timestamp": "2025-11-13T18:55:23.218458",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.382055,
+      "std": 0.068734,
+      "min": 0.189504,
+      "max": 0.554304
+    },
+    "recall": {
+      "mean": 0.319893,
+      "std": 0.064049,
+      "min": 0.14715,
+      "max": 0.503617
+    },
+    "f1": {
+      "mean": 0.345984,
+      "std": 0.060488,
+      "min": 0.165663,
+      "max": 0.517644
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.415827,
+      "std": 0.068077,
+      "min": 0.191739,
+      "max": 0.587467
+    }
+  }
+}

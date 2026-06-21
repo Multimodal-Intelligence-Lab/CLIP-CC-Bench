@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "llava_next_video",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.563845,
+    "min": 0.338681,
+    "max": 0.803975,
+    "std": 0.08711
+  },
+  "timestamp": "2025-11-13T21:15:08.114143",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.642598,
+      "std": 0.04246,
+      "min": 0.541164,
+      "max": 0.772894
+    },
+    "recall": {
+      "mean": 0.619378,
+      "std": 0.043221,
+      "min": 0.508996,
+      "max": 0.741449
+    },
+    "f1": {
+      "mean": 0.630195,
+      "std": 0.038269,
+      "min": 0.524826,
+      "max": 0.756845
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.593024,
+      "std": 0.062996,
+      "min": 0.41169,
+      "max": 0.766558
+    }
+  }
+}

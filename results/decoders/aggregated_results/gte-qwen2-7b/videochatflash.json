@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "videochatflash",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.628094,
+    "min": 0.455087,
+    "max": 0.781154,
+    "std": 0.069737
+  },
+  "timestamp": "2025-11-13T19:49:49.039629",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.62139,
+      "std": 0.050389,
+      "min": 0.484318,
+      "max": 0.79181
+    },
+    "recall": {
+      "mean": 0.56239,
+      "std": 0.046612,
+      "min": 0.441541,
+      "max": 0.712293
+    },
+    "f1": {
+      "mean": 0.589668,
+      "std": 0.043567,
+      "min": 0.461941,
+      "max": 0.729224
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.606995,
+      "std": 0.050024,
+      "min": 0.47078,
+      "max": 0.738198
+    }
+  }
+}

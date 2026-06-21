@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "internvl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.562968,
+    "min": 0.054781,
+    "max": 0.79713,
+    "std": 0.104312
+  },
+  "timestamp": "2025-11-13T20:06:55.905284",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.492109,
+      "std": 0.050691,
+      "min": 0.317131,
+      "max": 0.636494
+    },
+    "recall": {
+      "mean": 0.491648,
+      "std": 0.056599,
+      "min": 0.226561,
+      "max": 0.667931
+    },
+    "f1": {
+      "mean": 0.490994,
+      "std": 0.050169,
+      "min": 0.264302,
+      "max": 0.629603
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.521612,
+      "std": 0.074453,
+      "min": 0.092653,
+      "max": 0.687311
+    }
+  }
+}

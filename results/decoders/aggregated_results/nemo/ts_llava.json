@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "ts_llava",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.460736,
+    "min": 0.177127,
+    "max": 0.702629,
+    "std": 0.10755
+  },
+  "timestamp": "2025-11-13T20:50:38.819208",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.473575,
+      "std": 0.061077,
+      "min": 0.309088,
+      "max": 0.616818
+    },
+    "recall": {
+      "mean": 0.446953,
+      "std": 0.064307,
+      "min": 0.288749,
+      "max": 0.631355
+    },
+    "f1": {
+      "mean": 0.458941,
+      "std": 0.059363,
+      "min": 0.309114,
+      "max": 0.624002
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.457261,
+      "std": 0.081007,
+      "min": 0.230715,
+      "max": 0.640447
+    }
+  }
+}

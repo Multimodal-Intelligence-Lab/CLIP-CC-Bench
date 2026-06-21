@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "oryx",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.522685,
+    "min": 0.216201,
+    "max": 0.756022,
+    "std": 0.097508
+  },
+  "timestamp": "2025-11-13T19:30:10.409422",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.541191,
+      "std": 0.058637,
+      "min": 0.280004,
+      "max": 0.681994
+    },
+    "recall": {
+      "mean": 0.486178,
+      "std": 0.055851,
+      "min": 0.336381,
+      "max": 0.65918
+    },
+    "f1": {
+      "mean": 0.510976,
+      "std": 0.051475,
+      "min": 0.305615,
+      "max": 0.650175
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.514015,
+      "std": 0.070268,
+      "min": 0.292594,
+      "max": 0.699115
+    }
+  }
+}

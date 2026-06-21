@@ -1,0 +1,42 @@
+{
+  "decoder_name": "qwen3-8b",
+  "model_name": "Qwen2.5-72B",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.679014,
+    "min": 0.479409,
+    "max": 0.821805,
+    "std": 0.066691
+  },
+  "timestamp": "2025-11-13T21:45:39.567937",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.670897,
+      "std": 0.040038,
+      "min": 0.537154,
+      "max": 0.768199
+    },
+    "recall": {
+      "mean": 0.63688,
+      "std": 0.040518,
+      "min": 0.533811,
+      "max": 0.772463
+    },
+    "f1": {
+      "mean": 0.652957,
+      "std": 0.036165,
+      "min": 0.550932,
+      "max": 0.744885
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.664772,
+      "std": 0.047072,
+      "min": 0.516376,
+      "max": 0.764742
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nemo",
+  "model_name": "Qwen2.5-32B",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.600306,
+    "min": 0.392232,
+    "max": 0.78068,
+    "std": 0.070007
+  },
+  "timestamp": "2025-11-13T20:36:59.326273",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.496597,
+      "std": 0.044005,
+      "min": 0.356258,
+      "max": 0.594526
+    },
+    "recall": {
+      "mean": 0.491427,
+      "std": 0.049214,
+      "min": 0.34578,
+      "max": 0.651609
+    },
+    "f1": {
+      "mean": 0.493068,
+      "std": 0.041239,
+      "min": 0.360475,
+      "max": 0.591691
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.540244,
+      "std": 0.048169,
+      "min": 0.375684,
+      "max": 0.669591
+    }
+  }
+}

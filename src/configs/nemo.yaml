@@ -1,0 +1,52 @@
+# NVIDIA Llama-Embed-Nemotron-8B Isolated Embedding Model Configuration
+
+embedding_model:
+  name: "llama-embed-nemotron-8b"
+  path: "embedding_models/llama-embed-nemotron-8b"
+  type: "nemo"
+  batch_size: 8
+  max_length: 32768         # Nemotron default max length
+  trust_remote_code: true
+  additional_params:
+    torch_dtype: "float32"
+    attn_implementation: "eager"  # Use "flash_attention_2" if available
+
+  # Fine-grained evaluation settings
+  fine_grained:
+    enabled: true           # Enable fine-grained embedding matching
+    chunking_method: "nltk" # Use NLTK sentence tokenizer for chunking
+
+processing:
+  device: "cuda:0"
+  clear_cache_interval: 25
+  progress_interval: 10
+
+data_paths:
+  # Use relative paths - will be resolved from base directory
+  ground_truth_file: "data/ground_truth/clip_cc_dataset.json"
+  predictions_dir: "data/models"
+  results_base_dir: "results"
+
+# Text generation models to evaluate
+models_to_evaluate:
+  - "internvl"
+  - "llava_next_video"
+  - "llava_one_vision"
+  - "longva"
+  - "longvu"
+  - "minicpm"
+  - "mplug"
+  - "oryx"
+  - "Qwen2.5-32B"
+  - "Qwen2.5-72B"
+  - "sharegpt4"
+  - "timechat"
+  - "ts_llava"
+  - "videochatflash"
+  - "videollama3"
+  - "video_xl"
+  - "vilamp"
+
+logging:
+  level: "INFO"
+  log_prefix: "nemo_evaluation"

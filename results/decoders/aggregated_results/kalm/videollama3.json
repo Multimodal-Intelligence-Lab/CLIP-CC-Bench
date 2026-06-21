@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "videollama3",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.819059,
+    "min": 0.659872,
+    "max": 0.931957,
+    "std": 0.051433
+  },
+  "timestamp": "2025-11-13T22:41:29.273483",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.765617,
+      "std": 0.029371,
+      "min": 0.68906,
+      "max": 0.84813
+    },
+    "recall": {
+      "mean": 0.762655,
+      "std": 0.030621,
+      "min": 0.673382,
+      "max": 0.862531
+    },
+    "f1": {
+      "mean": 0.763846,
+      "std": 0.026081,
+      "min": 0.690935,
+      "max": 0.854671
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.789881,
+      "std": 0.033368,
+      "min": 0.69746,
+      "max": 0.854754
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "kalm",
+  "model_name": "video_xl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.740525,
+    "min": 0.371067,
+    "max": 0.874715,
+    "std": 0.06104
+  },
+  "timestamp": "2025-11-13T22:42:42.492746",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.719161,
+      "std": 0.032383,
+      "min": 0.50496,
+      "max": 0.786491
+    },
+    "recall": {
+      "mean": 0.711688,
+      "std": 0.037871,
+      "min": 0.457914,
+      "max": 0.789817
+    },
+    "f1": {
+      "mean": 0.715172,
+      "std": 0.032913,
+      "min": 0.480288,
+      "max": 0.782539
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.726873,
+      "std": 0.043114,
+      "min": 0.418671,
+      "max": 0.812311
+    }
+  }
+}

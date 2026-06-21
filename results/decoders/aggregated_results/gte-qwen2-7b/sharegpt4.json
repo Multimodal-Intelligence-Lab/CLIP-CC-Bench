@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "sharegpt4",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.63973,
+    "min": 0.482855,
+    "max": 0.874945,
+    "std": 0.071118
+  },
+  "timestamp": "2025-11-13T19:41:09.504757",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.578309,
+      "std": 0.051613,
+      "min": 0.439825,
+      "max": 0.690575
+    },
+    "recall": {
+      "mean": 0.561087,
+      "std": 0.052395,
+      "min": 0.429029,
+      "max": 0.696799
+    },
+    "f1": {
+      "mean": 0.56841,
+      "std": 0.045219,
+      "min": 0.44098,
+      "max": 0.676774
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.600836,
+      "std": 0.051532,
+      "min": 0.472587,
+      "max": 0.758296
+    }
+  }
+}

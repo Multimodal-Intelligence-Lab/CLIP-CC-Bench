@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "llava_next_video",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.547394,
+    "min": 0.298338,
+    "max": 0.810563,
+    "std": 0.091001
+  },
+  "timestamp": "2025-11-13T19:07:33.980227",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.536008,
+      "std": 0.050972,
+      "min": 0.434625,
+      "max": 0.672365
+    },
+    "recall": {
+      "mean": 0.529574,
+      "std": 0.051866,
+      "min": 0.40471,
+      "max": 0.648012
+    },
+    "f1": {
+      "mean": 0.531893,
+      "std": 0.046466,
+      "min": 0.423289,
+      "max": 0.659964
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.537381,
+      "std": 0.063644,
+      "min": 0.35192,
+      "max": 0.727552
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "longvu",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.612798,
+    "min": 0.175962,
+    "max": 0.801686,
+    "std": 0.099812
+  },
+  "timestamp": "2025-11-13T18:49:43.985412",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.478309,
+      "std": 0.06991,
+      "min": 0.297608,
+      "max": 0.699753
+    },
+    "recall": {
+      "mean": 0.41579,
+      "std": 0.065428,
+      "min": 0.247881,
+      "max": 0.594616
+    },
+    "f1": {
+      "mean": 0.44216,
+      "std": 0.057866,
+      "min": 0.29085,
+      "max": 0.577949
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.510187,
+      "std": 0.068307,
+      "min": 0.225738,
+      "max": 0.660793
+    }
+  }
+}

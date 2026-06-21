@@ -1,0 +1,42 @@
+{
+  "decoder_name": "nv-embed",
+  "model_name": "llava_next_video",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.498825,
+    "min": 0.235076,
+    "max": 0.800498,
+    "std": 0.10252
+  },
+  "timestamp": "2025-11-13T18:46:59.511394",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.392135,
+      "std": 0.071414,
+      "min": 0.0,
+      "max": 0.568044
+    },
+    "recall": {
+      "mean": 0.346387,
+      "std": 0.074256,
+      "min": 0.0,
+      "max": 0.525655
+    },
+    "f1": {
+      "mean": 0.365296,
+      "std": 0.066532,
+      "min": 0.0,
+      "max": 0.539009
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.419343,
+      "std": 0.078493,
+      "min": 0.0,
+      "max": 0.636234
+    }
+  }
+}

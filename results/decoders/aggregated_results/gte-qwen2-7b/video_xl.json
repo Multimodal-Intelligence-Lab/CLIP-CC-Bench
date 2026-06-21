@@ -1,0 +1,42 @@
+{
+  "decoder_name": "gte-qwen2-7b",
+  "model_name": "video_xl",
+  "total_evaluations": 199,
+  "successful_evaluations": 199,
+  "error_rate": 0.0,
+  "coarse_grained_stats": {
+    "mean": 0.632991,
+    "min": 0.068891,
+    "max": 0.836914,
+    "std": 0.078081
+  },
+  "timestamp": "2025-11-13T19:57:16.566102",
+  "fine_grained_stats": {
+    "precision": {
+      "mean": 0.566076,
+      "std": 0.046958,
+      "min": 0.171524,
+      "max": 0.659648
+    },
+    "recall": {
+      "mean": 0.578246,
+      "std": 0.053802,
+      "min": 0.121368,
+      "max": 0.701044
+    },
+    "f1": {
+      "mean": 0.571539,
+      "std": 0.047469,
+      "min": 0.142152,
+      "max": 0.670203
+    }
+  },
+  "hybrid_stats": {
+    "hm_cf": {
+      "mean": 0.599283,
+      "std": 0.056532,
+      "min": 0.092806,
+      "max": 0.720257
+    }
+  }
+}
