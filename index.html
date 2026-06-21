@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CLIP-CC Bench</title>
+<meta name="description" content="CLIP-CC Bench: Evaluating Paragraph-Level Video Descriptions in Video–Language Models (EvalMG @ SIGIR 2026).">
+<style>
+  :root{
+    --blue:#0033A0; --gold:#FFD100; --ink:#1b2a4a; --muted:#5b6b7e;
+    --bg:#f6f8fb; --card:#ffffff; --line:#e4e9f0;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  header{background:linear-gradient(160deg,var(--blue),#0a1f5c);color:#fff;padding:56px 0 44px;
+         border-bottom:5px solid var(--gold)}
+  .venue{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;
+         font-size:13px;letter-spacing:.04em;padding:5px 12px;border-radius:999px;margin-bottom:16px}
+  h1{font-size:30px;line-height:1.25;margin:0 0 16px}
+  .authors{font-size:17px;margin:0 0 4px}
+  .authors a{color:#fff;text-decoration:underline}
+  .aff{color:#cdd8ef;font-size:15px;margin:0 0 22px}
+  .eq{color:#cdd8ef;font-size:13px;margin:2px 0 22px}
+  .btns{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-flex;align-items:center;gap:7px;background:#ffffff;color:var(--blue);
+       font-weight:600;font-size:15px;padding:9px 16px;border-radius:8px;border:1px solid transparent}
+  .btn:hover{background:var(--gold);color:var(--ink);text-decoration:none}
+  section{padding:38px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 16px;color:var(--blue)}
+  p{margin:0 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#eef2f9;color:var(--ink)}
+  td.n,th.n{text-align:right}
+  tr:hover td{background:#f8fafd}
+  .top1 td{font-weight:700}
+  .note{color:var(--muted);font-size:14px}
+  pre{background:#0f1b3d;color:#e8eefc;padding:18px;border-radius:10px;overflow:auto;font-size:13px;line-height:1.5}
+  footer{padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
+  @media(max-width:640px){h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="venue">EvalMG @ SIGIR 2026</span>
+    <h1>CLIP-CC Bench: Evaluating Paragraph-Level Video Descriptions in Video–Language Models</h1>
+    <p class="authors">Mukhtiar Ali<sup>*</sup>, Harsh Dubey<sup>*</sup>, Sugam Mishra<sup>*</sup>, Chulwoo Pack</p>
+    <p class="aff">South Dakota State University</p>
+    <p class="eq"><sup>*</sup>Equal contribution. Corresponding author: Chulwoo Pack.</p>
+    <div class="btns">
+      <a class="btn" href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench">💻 Code</a>
+      <a class="btn" href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC">📊 Dataset (GitHub)</a>
+      <a class="btn" href="https://huggingface.co/datasets/IVSL-SDSU/Clip-CC">🤗 Dataset (HF)</a>
+      <a class="btn" href="#cite">📄 BibTeX</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Abstract</h2>
+    <p>Benchmarking video-language models has largely focused on short clips and single-sentence metrics, leaving open whether current systems can generate accurate long-form, paragraph-level descriptions. We introduce CLIP-CC Bench, an evaluation suite for long-form video description built from 5 hours of movie content segmented into 90-second clips, each paired with an expert-written paragraph-style reference. The evaluation suite employs an ensemble of five state-of-the-art LLM-based embedding models to increase reliability and mitigate single-model bias, and applies two complementary methodologies: (i) coarse-grained semantic matching and (ii) fine-grained semantic matching, to compare model-generated descriptions against CLIP-CC Bench references. Using this framework, we evaluate 17 state-of-the-art video-language models and report both their Borda-aggregated rankings and their average scores. We further quantify the protocol's internal reliability through inter-judge agreement and bootstrap ranking stability.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Leaderboard</h2>
+    <p class="note">17 VLMs ranked by Borda count across 5 MTEB embedding judges. <b>Mean HM-CF</b> = average harmonic mean of coarse- and fine-grained similarity across judges.</p>
+    <div class="card">
+      <table>
+        <thead><tr><th class="n">Rank</th><th>VLM</th><th class="n">Borda</th><th class="n">Mean HM-CF</th></tr></thead>
+        <tbody>
+          <tr class="top1"><td class="n">1</td><td>VideoLLaMA3</td><td class="n">80</td><td class="n">0.67</td></tr>
+          <tr><td class="n">2</td><td>mPLUG-Owl3</td><td class="n">75</td><td class="n">0.66</td></tr>
+          <tr><td class="n">3</td><td>LLaVA-OneVision</td><td class="n">67</td><td class="n">0.64</td></tr>
+          <tr><td class="n">4</td><td>ViLAMP</td><td class="n">67</td><td class="n">0.64</td></tr>
+          <tr><td class="n">5</td><td>LongVU</td><td class="n">61</td><td class="n">0.63</td></tr>
+          <tr><td class="n">6</td><td>Qwen2.5-72B</td><td class="n">55</td><td class="n">0.62</td></tr>
+          <tr><td class="n">7</td><td>Qwen2.5-32B</td><td class="n">48</td><td class="n">0.61</td></tr>
+          <tr><td class="n">8</td><td>VideoChat-Flash</td><td class="n">42</td><td class="n">0.60</td></tr>
+          <tr><td class="n">9</td><td>MiniCPM-V</td><td class="n">42</td><td class="n">0.60</td></tr>
+          <tr><td class="n">10</td><td>Video-XL</td><td class="n">36</td><td class="n">0.59</td></tr>
+          <tr><td class="n">11</td><td>ShareGPT4Video</td><td class="n">29</td><td class="n">0.58</td></tr>
+          <tr><td class="n">12</td><td>InternVL2</td><td class="n">27</td><td class="n">0.58</td></tr>
+          <tr><td class="n">13</td><td>TimeChat</td><td class="n">20</td><td class="n">0.56</td></tr>
+          <tr><td class="n">14</td><td>LLaVA-NeXT-Video</td><td class="n">16</td><td class="n">0.55</td></tr>
+          <tr><td class="n">15</td><td>TS-LLaVA</td><td class="n">9</td><td class="n">0.53</td></tr>
+          <tr><td class="n">16</td><td>Oryx</td><td class="n">6</td><td class="n">0.52</td></tr>
+          <tr><td class="n">17</td><td>LongVA</td><td class="n">0</td><td class="n">0.48</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:12px">Full per-judge scores: <a href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench/blob/main/results/embedding_models/aggregated_results/aggregated_results.csv">aggregated_results.csv</a>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Approach</h2>
+    <p>CLIP-CC Bench scores a candidate paragraph against an expert reference using an ensemble of five long-context MTEB embedding judges. Each judge combines a <b>coarse-grained</b> paragraph-level cosine similarity with a <b>fine-grained</b> sentence-level F1 (greedy best-match), and merges them into a harmonic mean (HM-CF). Per-judge rankings are aggregated with Borda count to produce the leaderboard, and the protocol's internal reliability is assessed via inter-judge agreement and bootstrap ranking stability.</p>
+    <p>The benchmark comprises <b>200</b> ~90-second movie clips (≈5 hours) with expert paragraph descriptions that deliberately exclude proper nouns, so evaluation targets visual understanding rather than memorized associations.</p>
+  </div>
+</section>
+
+<section id="cite">
+  <div class="wrap">
+    <h2>Citation</h2>
+    <pre>@inproceedings{ali2026clipcc,
+  title     = {{CLIP-CC} Bench: Evaluating Paragraph-Level Video Descriptions in Video--Language Models},
+  author    = {Ali, Mukhtiar and Dubey, Harsh and Mishra, Sugam and Pack, Chulwoo},
+  booktitle = {Proceedings of the Second Workshop on Evaluation for Multi-Modal Generation (EvalMG), SIGIR},
+  year      = {2026}
+}</pre>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Multimodal Intelligence Lab, South Dakota State University ·
+    <a href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench">Code</a> ·
+    <a href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC">Dataset</a>
+  </div>
+</footer>
+</body>
+</html>
