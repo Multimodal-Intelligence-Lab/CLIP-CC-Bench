@@ -1,83 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CLIP-CC Bench</title>
-<meta name="description" content="CLIP-CC Bench: Evaluating Paragraph-Level Video Descriptions in Video–Language Models (EvalMG @ SIGIR 2026).">
+<title>CLIP-CC Bench — Project Page</title>
+<meta name="description" content="CLIP-CC Bench: Evaluating Paragraph-Level Video Descriptions in Video–Language Models (EvalMG @ SIGIR 2026). Multimodal Intelligence Lab, South Dakota State University.">
+<link rel="stylesheet" href="style.css">
 <style>
-  :root{
-    --blue:#0033A0; --gold:#FFD100; --ink:#1b2a4a; --muted:#5b6b7e;
-    --bg:#f6f8fb; --card:#ffffff; --line:#e4e9f0;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-       color:var(--ink);background:var(--bg);line-height:1.6}
-  a{color:var(--blue);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
-  header{background:linear-gradient(160deg,var(--blue),#0a1f5c);color:#fff;padding:56px 0 44px;
-         border-bottom:5px solid var(--gold)}
-  .venue{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;
-         font-size:13px;letter-spacing:.04em;padding:5px 12px;border-radius:999px;margin-bottom:16px}
-  h1{font-size:30px;line-height:1.25;margin:0 0 16px}
-  .authors{font-size:17px;margin:0 0 4px}
-  .authors a{color:#fff;text-decoration:underline}
-  .aff{color:#cdd8ef;font-size:15px;margin:0 0 22px}
-  .eq{color:#cdd8ef;font-size:13px;margin:2px 0 22px}
-  .btns{display:flex;flex-wrap:wrap;gap:10px}
-  .btn{display:inline-flex;align-items:center;gap:7px;background:#ffffff;color:var(--blue);
-       font-weight:600;font-size:15px;padding:9px 16px;border-radius:8px;border:1px solid transparent}
-  .btn:hover{background:var(--gold);color:var(--ink);text-decoration:none}
-  section{padding:38px 0;border-bottom:1px solid var(--line)}
-  h2{font-size:22px;margin:0 0 16px;color:var(--blue)}
-  p{margin:0 0 14px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
-  table{width:100%;border-collapse:collapse;font-size:15px}
-  th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line)}
-  th{background:#eef2f9;color:var(--ink)}
-  td.n,th.n{text-align:right}
-  tr:hover td{background:#f8fafd}
-  .top1 td{font-weight:700}
-  .note{color:var(--muted);font-size:14px}
-  pre{background:#0f1b3d;color:#e8eefc;padding:18px;border-radius:10px;overflow:auto;font-size:13px;line-height:1.5}
-  footer{padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
-  @media(max-width:640px){h1{font-size:24px}}
+  /* PROJECT OVERRIDE — align to the lab's CVPR poster (matches the README banner):
+     poster blue #003087 for the band chrome + blue accents, poster green #2E7D32 for the
+     accent-green link/button/badge color. Local to this page; shared brand/colors.css untouched. */
+  body { --sdsu-blue: #003087; --mint-green-deep: #2E7D32; }
+  /* Lab-name treatment in the affiliation, matching the README banner: green M + Int + trailing leaf. */
+  .band-affil .g    { color: var(--mint-green-deep); }
+  .band-affil .leaf { height: 0.85em; width: auto; vertical-align: -0.12em; fill: var(--mint-green-deep); }
 </style>
 </head>
-<body>
-<header>
-  <div class="wrap">
-    <span class="venue">EvalMG @ SIGIR 2026</span>
-    <h1>CLIP-CC Bench: Evaluating Paragraph-Level Video Descriptions in Video–Language Models</h1>
-    <p class="authors">Mukhtiar Ali<sup>*</sup>, Harsh Dubey<sup>*</sup>, Sugam Mishra<sup>*</sup>, Chulwoo Pack</p>
-    <p class="aff">South Dakota State University</p>
-    <p class="eq"><sup>*</sup>Equal contribution. Corresponding author: Chulwoo Pack.</p>
-    <div class="btns">
-      <a class="btn" href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench">💻 Code</a>
-      <a class="btn" href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC">📊 Dataset (GitHub)</a>
-      <a class="btn" href="https://huggingface.co/datasets/IVSL-SDSU/Clip-CC">🤗 Dataset (HF)</a>
-      <a class="btn" href="#cite">📄 BibTeX</a>
-    </div>
+<body class="accent-green">
+
+<!-- ════════════════════════ BRAND CHROME — do not edit ════════════════════════
+     This is the STANDARDIZED part of the template: the gold band (here) and the footer (bottom) are
+     the locked lab identity — the same header as the deck / poster / readme-header. The paper title
+     lives IN the gold band (deck/poster style). The band, the SDSU|MINT lockup, the gold art and the
+     blue corner triangle are shared brand chrome; the band pins to the top on scroll (desktop).
+     Edit only the content between the ↓↓↓ / ↑↑↑ EDIT markers — everything else is the brand. -->
+<header class="gold band-head">
+  <img class="art" src="assets/header_back_yellow.png" alt="">
+  <img class="art" src="assets/header_over_yellow.png" alt="">
+  <svg class="corner" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <path style="fill:var(--sdsu-blue)" d="M0 0 L100 0 L100 88 Q100 100 92 92 Z"/>
+  </svg>
+
+  <div class="lockup">
+    <img class="sdsu" src="brand/logos/sdsu-logo.png" alt="South Dakota State University">
+    <span class="sep"></span>
+    <img class="mint" src="brand/logos/mint-logo.png" alt="Multimodal Intelligence Lab">
   </div>
+
+  <!-- ↓↓↓ EDIT FOR YOUR PROJECT ↓↓↓ -->
+  <div class="band-center">
+    <h1 class="band-title"><b>CLIP-CC Bench</b>: Evaluating Paragraph-Level Video Descriptions in Video&ndash;Language Models</h1>
+    <p class="band-authors">Mukhtiar Ali<sup>*</sup>, Harsh Dubey<sup>*</sup>, Sugam Mishra<sup>*</sup>, Chulwoo Pack</p>
+    <p class="band-affil">South Dakota State University &middot; Dept. of Electrical Engineering &amp; Computer Science &middot; <span class="g">M</span>ultimodal <span class="g">Int</span>elligence Lab&nbsp;<svg class="leaf" viewBox="0 0 576 512" aria-hidden="true"><path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465 467.5 576 326.7 576 144c0-44.5-13.9-93.4-29.8-134.3z"/></svg> &middot; <sup>*</sup>Equal contribution</p>
+  </div>
+  <!-- QR → the lab GitHub org by default; swap for your project QR or delete the line to drop it. -->
+  <img class="qr" src="brand/qr/mint-lab-qr.png" alt="Lab QR — github.com/Multimodal-Intelligence-Lab">
 </header>
 
-<section>
-  <div class="wrap">
-    <h2>Abstract</h2>
-    <p>Benchmarking video-language models has largely focused on short clips and single-sentence metrics, leaving open whether current systems can generate accurate long-form, paragraph-level descriptions. We introduce CLIP-CC Bench, an evaluation suite for long-form video description built from 5 hours of movie content segmented into 90-second clips, each paired with an expert-written paragraph-style reference. The evaluation suite employs an ensemble of five state-of-the-art LLM-based embedding models to increase reliability and mitigate single-model bias, and applies two complementary methodologies: (i) coarse-grained semantic matching and (ii) fine-grained semantic matching, to compare model-generated descriptions against CLIP-CC Bench references. Using this framework, we evaluate 17 state-of-the-art video-language models and report both their Borda-aggregated rankings and their average scores. We further quantify the protocol's internal reliability through inter-judge agreement and bootstrap ranking stability.</p>
-  </div>
-</section>
+<!-- Action buttons — edit the hrefs; add/remove buttons (Video, Data, Demo, …) as needed. -->
+<nav class="band-actions" aria-label="Project links">
+  <a class="btn" href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    Code
+  </a>
+  <a class="btn" href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+    Dataset &middot; GitHub
+  </a>
+  <a class="btn" href="https://huggingface.co/datasets/IVSL-SDSU/Clip-CC" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+    Dataset &middot; Hugging Face
+  </a>
+  <a class="btn" href="#bibtex" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+    BibTeX
+  </a>
+</nav>
 
-<section>
-  <div class="wrap">
-    <h2>Leaderboard</h2>
-    <p class="note">17 VLMs ranked by Borda count across 5 MTEB embedding judges. <b>Mean HM-CF</b> = average harmonic mean of coarse- and fine-grained similarity across judges.</p>
-    <div class="card">
-      <table>
+<main>
+  <!-- ── Abstract ─────────────────────────────────────────────────────────────────────────── -->
+  <section class="section section--tint" id="abstract">
+    <div class="wrap">
+      <h2>Abstract</h2>
+      <div class="prose abstract">
+        <p>Benchmarking video&ndash;language models has largely focused on short clips and single-sentence
+        metrics, leaving open whether current systems can generate accurate long-form, paragraph-level
+        descriptions. We introduce CLIP-CC Bench, an evaluation suite for long-form video description built
+        from <span class="num">5 hours</span> of movie content segmented into 90-second clips, each paired
+        with an expert-written paragraph-style reference. The suite employs an ensemble of
+        <span class="num">five</span> state-of-the-art LLM-based embedding models to mitigate single-model
+        bias, applying two complementary methodologies &mdash; coarse-grained and fine-grained semantic
+        matching &mdash; to compare model-generated descriptions against the references. Using this framework
+        we evaluate <span class="num">17</span> state-of-the-art video&ndash;language models and report both
+        their Borda-aggregated rankings and average scores, and we quantify the protocol's internal
+        reliability through inter-judge agreement and bootstrap ranking stability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Method / Approach (free-form — fill with your figures and text) ──────────────────── -->
+  <section class="section" id="method">
+    <div class="wrap">
+      <h2>Approach</h2>
+      <div class="prose">
+        <p>CLIP-CC Bench scores a candidate paragraph against an expert reference using an ensemble of five
+        long-context embedding judges. Each judge combines a coarse-grained, paragraph-level cosine
+        similarity with a fine-grained, sentence-level F1 (greedy best-match), merged into a harmonic mean
+        (HM-CF). Per-judge rankings are aggregated with Borda count to produce the leaderboard, and the
+        protocol's reliability is assessed via inter-judge agreement and bootstrap ranking stability.</p>
+      </div>
+      <div class="badges">
+        <div class="badge"><span class="n">1</span><div><strong>Long-form benchmark</strong>200 movie clips of ~90 seconds (~5 hours) with expert paragraph references that deliberately exclude proper nouns, so scoring targets visual understanding over memorization.</div></div>
+        <div class="badge"><span class="n">2</span><div><strong>Ensemble embedding protocol</strong>Five embedding judges, each fusing coarse-grained (paragraph) and fine-grained (sentence-level F1) similarity into a harmonic mean, aggregated by Borda count.</div></div>
+        <div class="badge"><span class="n">3</span><div><strong>17-VLM study with reliability</strong>Rankings and mean scores for 17 video&ndash;language models, with inter-judge agreement and bootstrap ranking stability to quantify confidence.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Results (gold .stat cards — gold is reserved for the headline result) ──────────────
+       The numbers below are the worked example; swap them for your paper's. -->
+  <section class="section section--tint" id="results">
+    <div class="wrap">
+      <h2>Results</h2>
+      <div class="stats">
+        <div class="stat"><div class="big">17</div><div class="lab">video&ndash;language models <span>(benchmarked)</span></div></div>
+        <div class="stat"><div class="big">200</div><div class="lab">movie clips <span>(~5 hours, expert paragraphs)</span></div></div>
+        <div class="stat"><div class="big">5</div><div class="lab">embedding judges <span>(ensemble, Borda-aggregated)</span></div></div>
+      </div>
+      <p class="prose" style="margin-top:1rem">Final ranking of the 17 VLMs. <strong>Borda</strong> = Borda count across the five embedding judges; <strong>Mean HM-CF</strong> = average harmonic mean of coarse- and fine-grained similarity across judges.</p>
+      <style>
+        .leaderboard{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:.5rem}
+        .leaderboard th,.leaderboard td{padding:.45rem .6rem;border-bottom:1px solid var(--border);text-align:left}
+        .leaderboard th{color:var(--accent);border-bottom:2px solid var(--accent)}
+        .leaderboard td.n,.leaderboard th.n{text-align:right}
+        .leaderboard tbody tr:first-child{font-weight:700}
+      </style>
+      <table class="leaderboard">
         <thead><tr><th class="n">Rank</th><th>VLM</th><th class="n">Borda</th><th class="n">Mean HM-CF</th></tr></thead>
         <tbody>
-          <tr class="top1"><td class="n">1</td><td>VideoLLaMA3</td><td class="n">80</td><td class="n">0.67</td></tr>
+          <tr><td class="n">1</td><td>VideoLLaMA3</td><td class="n">80</td><td class="n">0.67</td></tr>
           <tr><td class="n">2</td><td>mPLUG-Owl3</td><td class="n">75</td><td class="n">0.66</td></tr>
           <tr><td class="n">3</td><td>LLaVA-OneVision</td><td class="n">67</td><td class="n">0.64</td></tr>
           <tr><td class="n">4</td><td>ViLAMP</td><td class="n">67</td><td class="n">0.64</td></tr>
@@ -97,36 +148,84 @@
         </tbody>
       </table>
     </div>
-    <p class="note" style="margin-top:12px">Full per-judge scores: <a href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench/blob/main/results/embedding_models/aggregated_results/aggregated_results.csv">aggregated_results.csv</a>.</p>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="wrap">
-    <h2>Approach</h2>
-    <p>CLIP-CC Bench scores a candidate paragraph against an expert reference using an ensemble of five long-context MTEB embedding judges. Each judge combines a <b>coarse-grained</b> paragraph-level cosine similarity with a <b>fine-grained</b> sentence-level F1 (greedy best-match), and merges them into a harmonic mean (HM-CF). Per-judge rankings are aggregated with Borda count to produce the leaderboard, and the protocol's internal reliability is assessed via inter-judge agreement and bootstrap ranking stability.</p>
-    <p>The benchmark comprises <b>200</b> ~90-second movie clips (≈5 hours) with expert paragraph descriptions that deliberately exclude proper nouns, so evaluation targets visual understanding rather than memorized associations.</p>
-  </div>
-</section>
-
-<section id="cite">
-  <div class="wrap">
-    <h2>Citation</h2>
-    <pre>@inproceedings{ali2026clipcc,
+  <!-- ── BibTeX ───────────────────────────────────────────────────────────────────────────── -->
+  <section class="section" id="bibtex">
+    <div class="wrap">
+      <h2>BibTeX</h2>
+      <div class="cite">
+        <button class="copy-btn" type="button" data-copy="#bibtex-src">Copy</button>
+        <span class="vh" role="status" aria-live="polite"></span>
+<pre id="bibtex-src">@inproceedings{ali2026clipcc,
   title     = {{CLIP-CC} Bench: Evaluating Paragraph-Level Video Descriptions in Video--Language Models},
   author    = {Ali, Mukhtiar and Dubey, Harsh and Mishra, Sugam and Pack, Chulwoo},
   booktitle = {Proceedings of the Second Workshop on Evaluation for Multi-Modal Generation (EvalMG), SIGIR},
   year      = {2026}
 }</pre>
-  </div>
-</section>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="wrap">
-    Multimodal Intelligence Lab, South Dakota State University ·
-    <a href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench">Code</a> ·
-    <a href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC">Dataset</a>
+  <!-- ↑↑↑ EDIT FOR YOUR PROJECT ↑↑↑ -->
+</main>
+
+<!-- ════════════════════════ BRAND CHROME — do not edit ════════════════════════
+     Footer: the permanent home of the SDSU|MINT lockup + the lab QR, with a thin gold top-rule
+     that bookends the gold header. -->
+<footer class="site-footer">
+  <div class="inner">
+    <div class="lockup">
+      <img class="sdsu" src="brand/logos/sdsu-logo.png" alt="South Dakota State University">
+      <span class="sep"></span>
+      <img class="mint" src="brand/logos/mint-logo.png" alt="Multimodal Intelligence Lab">
+    </div>
+    <div class="f-text">
+      <strong>Multimodal Intelligence Lab</strong>
+      South Dakota State University &middot; Dept. of Electrical Engineering &amp; Computer Science<br>
+      <a href="https://github.com/Multimodal-Intelligence-Lab">github.com/Multimodal-Intelligence-Lab</a>
+    </div>
+    <img class="f-qr" src="brand/qr/mint-lab-qr.png" alt="Lab QR — github.com/Multimodal-Intelligence-Lab">
   </div>
 </footer>
+
+<!-- Scroll-to-top — brand chrome; revealed by the script once you scroll down. Don't edit. -->
+<button class="to-top" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script>
+  // Copy-to-clipboard for any [data-copy="#selector"] button (the BibTeX block uses it).
+  // Visible label swap for sighted users + a role="status" region so screen readers hear it.
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var el = document.querySelector(btn.getAttribute("data-copy"));
+      if (!el || !navigator.clipboard) return;
+      var old = btn.textContent;
+      var status = btn.parentNode.querySelector("[role=status]");
+      navigator.clipboard.writeText(el.innerText.trim()).then(function () {
+        btn.textContent = "Copied!";
+        if (status) status.textContent = "BibTeX copied to clipboard";
+        setTimeout(function () { btn.textContent = old; if (status) status.textContent = ""; }, 1500);
+      }).catch(function () { btn.textContent = old; });
+    });
+  });
+
+  // Scroll-to-top: reveal the button past ~400px of scroll (rAF-throttled), jump to top on click.
+  // Honors prefers-reduced-motion (instant, no smooth scroll). Dependency-free.
+  var toTop = document.querySelector(".to-top");
+  if (toTop) {
+    var ticking = false;
+    function syncToTop() { toTop.classList.toggle("show", window.scrollY > 400); ticking = false; }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { requestAnimationFrame(syncToTop); ticking = true; }
+    }, { passive: true });
+    syncToTop();
+    toTop.addEventListener("click", function () {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    });
+  }
+</script>
 </body>
 </html>

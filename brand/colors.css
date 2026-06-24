@@ -1,0 +1,31 @@
+/* MINT — brand colors.
+   The lab palette as plain CSS custom properties (no build step). Import where needed —
+   path is relative to your file, e.g. from a module under mint/:  @import "../brand/colors.css";
+   then use var(--…); never paste raw hex. Each group notes its source (logo / institution / reference). */
+
+:root {
+  /* ── MINT — the lab brand (from brand/logos/mint-logo.png) ─────────────────────── */
+  --mint-green:      #478a2d;  /* primary — the M+leaf mark */
+  --mint-green-deep: #106f2f;  /* deep — the "Multimodal" wordmark; text & strong accents */
+
+  /* ── SDSU — institutional, official brand standard (South Dakota State University) ── */
+  /* PMS-defined primaries from the SDState Graphic Identity Standards — NOT eyedropped from
+     the logo PNG (which renders them slightly differently). The SDSU mark is a trademark:
+     use these in university / official contexts; never recolor the mark. */
+  --sdsu-yellow: #ffd100;  /* SDState Yellow — PMS 109 */
+  --sdsu-blue:   #0033a0;  /* SDState Blue  — PMS 286 */
+
+  /* ── Neutrals ──────────────────────────────────────────────────────────────────── */
+  --ink:    #222222;  /* body text */
+  --border: #cccccc;  /* hairlines, grids, dividers */
+  --paper:  #ffffff;  /* surfaces */
+
+  /* ── MuSDeT teaser — REFERENCE ONLY (example per-paper accents, not the brand) ─ */
+  /* Example per-paper accents from the MuSDeT teaser — NOT the MINT brand. Kept so a new
+     paper can see how the teaser chose an accent + per-modality figure colors. */
+  --ref-musdet-gold: #efc500;  /* the teaser's signature, "reserved for our model" */
+  --ref-musdet-navy: #01122b;
+  --ref-musdet-m1:   #3b7dd8;  /* modality 1 — ECG */
+  --ref-musdet-m2:   #1a9e76;  /* modality 2 — RESP */
+  --ref-musdet-m3:   #e07b39;  /* modality 3 — EDA */
+}

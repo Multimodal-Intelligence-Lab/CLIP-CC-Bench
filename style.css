@@ -1,0 +1,299 @@
+/* MINT demo-pages — the shared web stylesheet for a paper / project page.
+   Identity: the same brand as the deck, the poster, and the readme-header — gold header
+   band + SDSU | MINT lockup + the brand greens/blue — but BUILT FRESH for the screen. The deck is a
+   fixed 1280×720 stage scaled by JS (not responsive); a webpage must reflow, so this *applies* the
+   brand tokens to a responsive layout rather than porting print/stage CSS.
+
+   Brand primaries are single-sourced from brand/colors.css (never paste raw hex). The type
+   hierarchy steps off the brand ratio in brand/tokens.css. The few values declared locally below
+   are NEUTRAL screen affordances with no brand equivalent (a hover shadow, a faint panel tint) —
+   exactly the way poster.css declares its print-only --poster-ink/--panel locally. No brand-identity
+   color is ever hardcoded here.
+
+   ACCENT: the web layer (links, buttons, section rules, eyebrows, in-text emphasis) is driven by a
+   single --accent variable, so the page voice swaps blue<->green in one line. The gold header chrome
+   (band, lockup, corner triangle, title text) stays on --sdsu-blue in BOTH accents — that fixed band
+   IS the "same header as the deck/poster" identity (matching readme-header + poster). */
+
+@import "brand/colors.css";
+@import "brand/tokens.css";   /* --type-ratio drives the modular type scale built in :root below */
+
+@font-face {
+  font-family: "Inter";
+  src: url("brand/fonts/inter-variable-latin.woff2") format("woff2");
+  font-weight: 100 900; font-style: normal;
+  font-display: swap;            /* web-correct: show text immediately, swap Inter in when ready */
+}
+@font-face {
+  font-family: "Inter";
+  src: url("brand/fonts/inter-variable-latin-italic.woff2") format("woff2");
+  font-weight: 100 900; font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* ── Web-local NEUTRALS (not brand colors) ───────────────────────────────────────────────
+     Screen affordances brand/ has no token for — declared here with the same discipline as
+     poster.css's local --poster-ink/--panel. Never add a brand-identity hex in this block. */
+  --surface:   #f6f7f9;                 /* faint panel — code blocks, alternating ground */
+  --shadow:    0 6px 22px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+  /* ── Modular type scale ──────────────────────────────────────────────────────────────────
+     One knob (--type-ratio, from brand/tokens.css) drives the hierarchy; the BASE is fluid (clamp)
+     so every derived size scales with the viewport. Big display sizes (a content display heading, the
+     hero stat) take a wider clamp of their own — a webpage wants a true display size, the same way
+     poster.css lets the hero stat jump several extra ratio steps. Elements pick a step, not a size. */
+  --fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);                 /* body 16→17px            */
+  --fs-sm:   calc(var(--fs-base) / var(--type-ratio));                 /* small print, labels      */
+  --fs-xs:   calc(var(--fs-sm) / var(--type-ratio));                   /* captions, fine print     */
+  --fs-lg:   calc(var(--fs-base) * var(--type-ratio));                 /* lead text, authors       */
+  --fs-h3:   calc(var(--fs-lg) * var(--type-ratio));                   /* sub-heading              */
+  --fs-h2:   clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem);                    /* section heading          */
+  --fs-h1:   clamp(2rem, 1.25rem + 3.2vw, 3.25rem);                    /* display heading (for content) */
+  --fs-stat: clamp(2.4rem, 1.6rem + 3.4vw, 3.6rem);                    /* big result number        */
+
+  /* ── Geometry / rhythm ─── */
+  --maxw:        1080px;                 /* page max width (band, results, figures)  */
+  --maxw-prose:  72ch;                   /* readable measure for running text        */
+  --gutter:      clamp(1.1rem, 0.6rem + 2.2vw, 2.4rem);
+  --section-y:   clamp(2.75rem, 1.6rem + 4vw, 5.5rem);
+  --radius:      14px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: var(--fs-base); line-height: 1.6;
+  color: var(--ink); background: var(--paper);
+  --accent: var(--sdsu-blue);            /* default page voice — blue (continuity with the band) */
+  -webkit-font-smoothing: antialiased;
+}
+/* The single-line accent swap: green page voice (the AA-safe deep green reads on white AND under
+   white button text). Toggled by adding class="accent-green" to <body>. */
+body.accent-green { --accent: var(--mint-green-deep); }
+
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-underline-offset: 2px; }
+h1, h2, h3 { line-height: 1.15; text-wrap: balance; }
+p { margin: 0 0 1em; }
+
+/* ── Layout primitives ──────────────────────────────────────────────────────────────────── */
+.wrap   { max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+.prose  { max-width: var(--maxw-prose); margin-inline: auto; }
+.section { padding-block: var(--section-y); }
+.section + .section { padding-top: 0; }
+.section--tint { background: var(--surface); }
+.section--tint + .section { padding-top: var(--section-y); }
+
+.section h2 {
+  font-size: var(--fs-h2); color: var(--ink);
+  text-align: center; margin: 0 0 1.4rem;
+}
+/* The web translation of the poster's blue section bar: a short accent rule under the heading —
+   one of the most visible places the blue<->green accent reads. */
+.section h2::after {
+  content: ""; display: block; width: 2.75rem; height: 3px;
+  background: var(--accent); border-radius: 2px; margin: 0.7rem auto 0;
+}
+.section .lead { font-size: var(--fs-lg); }
+
+/* ============================================================================================
+   BRAND CHROME — the standardized, LOCKED part of the template: the gold header band (here) and the
+   footer (below). The band carries the SDSU|MINT lockup, the paper title, the blue corner triangle
+   and the QR; the footer is its bookend. This is the "same header as the deck/poster/readme-header"
+   identity, so the page accent NEVER touches it — the band text stays --sdsu-blue in both accents.
+   Everything between the EDIT markers in the HTML is the author's freeform content; this chrome is not.
+   ============================================================================================ */
+
+/* Shared chrome bits ── */
+.gold {                              /* the gold ground; a flat --sdsu-yellow base under the art so
+                                        the header is gold even if the texture art is dropped */
+  position: relative; overflow: hidden; background: var(--sdsu-yellow);
+  font-family: "Inter", system-ui, sans-serif;
+}
+.gold .art {                         /* the two stacked MuSDeT band PNGs, as a cover layer behind */
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center; z-index: 0;
+}
+.gold .corner {                      /* folded-paper blue triangle, top-right (deck/poster chrome) */
+  position: absolute; top: 0; right: 0; width: 2rem; height: 2rem; z-index: 3;
+}
+.lockup { display: flex; align-items: center; gap: 0.7rem; z-index: 2; }
+.lockup .sdsu { height: 46px; width: auto; }     /* SDSU optically a touch taller than MINT */
+.lockup .mint { height: 42px; width: auto; }
+.lockup .sep  { width: 2px; align-self: stretch; background: var(--sdsu-blue); opacity: 0.85; }
+.gold .qr { width: auto; z-index: 2; }   /* QR: green modules read on the gold ground (height set per-band below) */
+
+/* ── The gold band — title in the band, deck/poster style ──────────────────────────────────
+   Flow-based (NOT the fixed-height readme-header band, which is built to clip a long title): a grid
+   that grows taller when the title wraps, so it reflows instead of clipping. The marks (lockup + QR)
+   are sized as fractions of --band-h so they FILL the band proportionally — the same way poster.css
+   sizes its lockup off --header-h — rather than at a fixed px that reads small in a tall web band. */
+.band-head {
+  --band-h: 5rem;                             /* reference height the lockup + QR are sized against   */
+  display: grid;
+  grid-template-columns: auto 1fr auto;       /* lockup | title | QR */
+  align-items: center; gap: clamp(1rem, 3vw, 2.5rem);
+  min-height: calc(var(--band-h) + 1.7rem); padding: 0.85rem clamp(1.1rem, 3vw, 2.4rem);
+  color: var(--sdsu-blue);                    /* chrome text is brand blue in BOTH accents */
+  position: sticky; top: 0; z-index: 10;      /* keeps the brand pinned on scroll (desktop)           */
+  box-shadow: var(--shadow-sm);               /* reads as lifted when stuck (subtle, harmless at rest) */
+}
+/* Marks fill the band, proportional to --band-h (mirrors poster .logos at ~84% of the header). */
+.band-head .lockup .sdsu { height: calc(var(--band-h) * 0.92); }   /* SDSU optically a touch taller */
+.band-head .lockup .mint { height: calc(var(--band-h) * 0.84); }
+.band-head .qr           { height: calc(var(--band-h) * 0.88); }
+.band-head .band-center { position: relative; z-index: 2; text-align: center; min-width: 0; }  /* above the art (z:0), like .lockup/.qr */
+.band-head .band-title {
+  font-size: clamp(1.05rem, 0.7rem + 1.4vw, 1.6rem);
+  font-weight: 800; line-height: 1.14; margin: 0; letter-spacing: 0.1px;
+}
+.band-head .band-title b { color: var(--sdsu-blue); }
+.band-head .band-authors { font-size: var(--fs-sm); font-weight: 700; margin: 0.35rem 0 0; }
+.band-head .band-affil   { font-size: var(--fs-xs); font-weight: 600; opacity: 0.85; margin: 0.2rem 0 0; }
+
+/* Action buttons sit just below the band in the BAND variant */
+.band-actions {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem;
+  padding: 1.4rem var(--gutter) 0;
+}
+
+/* ── Action buttons (under the band) ──────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5em;
+  padding: 0.65em 1.15em; border-radius: 999px;
+  background: var(--accent); color: var(--paper);
+  border: 2px solid var(--accent);
+  font-size: var(--fs-sm); font-weight: 700; text-decoration: none; white-space: nowrap;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+.btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.btn svg { width: 1.15em; height: 1.15em; flex: none; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn.ghost:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+/* ── Abstract / prose ─────────────────────────────────────────────────────────────────────── */
+.abstract p { font-size: var(--fs-lg); }
+
+/* ── Method — contribution pills (.badge, screen port of the poster) ────────────────── */
+.badges {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem; margin: 1.6rem 0;
+}
+.badge {
+  display: flex; align-items: flex-start; gap: 0.7rem;
+  background: var(--paper); color: var(--ink);
+  border: 2px solid var(--border); border-radius: 12px;
+  padding: 1rem 1.1rem; box-shadow: var(--shadow-sm);
+}
+.badge .n {
+  flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  background: var(--accent); color: var(--paper);
+  display: grid; place-items: center; font-weight: 800; font-size: var(--fs-sm);
+}
+.badge .n + div { font-size: var(--fs-sm); line-height: 1.4; }
+.badge strong { display: block; margin-bottom: 0.15rem; }
+
+/* Figure slot (architecture / qualitative) — host arbitrary user art */
+.figure { margin: 1.6rem auto 0; text-align: center; }
+.figure img { margin-inline: auto; border-radius: 10px; }
+.figure .ph {
+  display: grid; place-items: center; min-height: 12rem; padding: 1.5rem;
+  border: 2px dashed var(--border); border-radius: 10px; color: var(--ink); opacity: 0.7;
+}
+.figure figcaption { font-size: var(--fs-sm); font-style: italic; color: var(--ink); opacity: 0.8; margin-top: 0.6rem; }
+
+/* ── Results — gold hero stat cards (.stat, screen port). Gold = the one headline-result accent
+      (60/30/10), tying back to the gold header — never the page accent. ───────────────────── */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+.stat {
+  background: var(--paper); border: 3px solid var(--sdsu-yellow); border-radius: var(--radius);
+  padding: 1.3rem 1rem; text-align: center; box-shadow: var(--shadow-sm);
+}
+.stat .big { font-size: var(--fs-stat); font-weight: 900; color: var(--ink); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .unit { font-size: 0.55em; font-weight: 800; }
+.stat .lab { font-size: var(--fs-sm); font-weight: 700; color: var(--ink); margin-top: 0.5rem; }
+.stat .lab span { color: var(--accent); }       /* the qualifier picks up the page accent */
+.num { font-variant-numeric: tabular-nums; }
+
+/* ── BibTeX ───────────────────────────────────────────────────────────────────────────────── */
+.cite { position: relative; max-width: var(--maxw-prose); margin-inline: auto; }
+.cite pre {
+  margin: 0; padding: 1.2rem 1.3rem; overflow-x: auto;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: var(--fs-sm); line-height: 1.5; color: var(--ink);
+}
+.copy-btn {
+  position: absolute; top: 0.7rem; right: 0.7rem;
+  padding: 0.4em 0.8em; border-radius: 8px; cursor: pointer;
+  background: var(--accent); color: var(--paper); border: 0;
+  font-family: inherit; font-size: var(--fs-xs); font-weight: 700;
+}
+.copy-btn:hover { filter: brightness(1.08); }
+/* Visually-hidden live region — announces the copy to screen readers (WCAG 4.1.3 status messages) */
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* ── Footer — permanent home of the lockup + QR; a thin gold top-rule bookends the gold header ─ */
+.site-footer {
+  background: var(--surface); border-top: 4px solid var(--sdsu-yellow);
+  padding: var(--section-y) var(--gutter);
+}
+.site-footer .inner {
+  max-width: var(--maxw); margin-inline: auto;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;
+}
+.site-footer .lockup .sep { background: var(--border); opacity: 1; }   /* hairline on a light ground */
+.site-footer .f-text { font-size: var(--fs-sm); color: var(--ink); opacity: 0.85; }
+.site-footer .f-text strong { display: block; font-weight: 800; opacity: 1; }
+.site-footer .f-qr { height: 72px; width: auto; }
+.site-footer a { color: var(--accent); text-decoration: none; }
+
+/* ── Scroll-to-top — a small floating button revealed once the header scrolls out of view
+      (toggled by the inline script via a top sentinel). Dependency-free; reduced-motion safe. ── */
+.to-top {
+  position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem);
+  width: 2.75rem; height: 2.75rem; border-radius: 50%; cursor: pointer;
+  background: var(--accent); color: var(--paper); border: 0;
+  display: grid; place-items: center; box-shadow: var(--shadow); z-index: 20;
+  opacity: 0; visibility: hidden; transform: translateY(8px);   /* hidden + out of tab order until shown */
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { filter: brightness(1.08); }
+.to-top svg { width: 1.3rem; height: 1.3rem; }
+
+/* ============================================================================================
+   RESPONSIVE — the layout reflows; nothing is fixed-px-wide. One main breakpoint for the header.
+   ============================================================================================ */
+@media (max-width: 720px) {
+  /* BAND: stack lockup over title; the QR drops out of the band and lives in the footer (its
+     permanent home) — a reorder, not a second copy. Drop sticky here — a stacked, taller band would
+     eat the small viewport; it scrolls away normally and the scroll-to-top button covers the jump. */
+  .band-head {
+    --band-h: 4.25rem;                 /* shrink the band marks with the viewport (the band override
+                                          out-specifies the bare .lockup rule, so scale via the token) */
+    grid-template-columns: 1fr; justify-items: center; text-align: center;
+    gap: 0.8rem; padding: 1.1rem var(--gutter);
+    position: relative; box-shadow: none;   /* drop sticky on mobile — but stay POSITIONED, not static,
+                                                so the absolute .art stays clipped to the band (static
+                                                would re-anchor it to the viewport → gold over the page) */
+  }
+  .band-head .qr { display: none; }
+  .band-head .band-center { order: 2; }
+}
+@media (max-width: 480px) {
+  .lockup .sdsu { height: 38px; }
+  .lockup .mint { height: 34px; }
+  .btn { font-size: var(--fs-xs); }
+}
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .to-top { transition: none; }
+}

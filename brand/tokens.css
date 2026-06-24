@@ -1,0 +1,18 @@
+/* MINT — brand design tokens (non-color).
+   The lab's portable, medium-agnostic design decisions as CSS custom properties — the companion to
+   colors.css. Import where needed (path relative to your file):  @import "../brand/tokens.css";
+   then use var(--…). Colors live in colors.css; logos/fonts/icons/qr under brand/.
+
+   These are UNITLESS / ratio tokens on purpose: each consumer derives its own base size in its own
+   medium's units (the poster off the page dimensions, a slide off the viewport) and then steps off
+   these ratios — so type and rhythm read the same across artifacts without sharing print CSS.
+   Deliberately minimal — seeded with what a real consumer (posters) needs now; grow it only when a
+   new consumer actually needs a token (same anti-over-build rule as the rest of brand/). */
+
+:root {
+  /* Modular type-scale ratio — the single knob for the lab's type hierarchy (and, where a consumer
+     wants it, its vertical rhythm). 1.125 (the "major second"): a tight, refined step suited to
+     information-dense posters & slides — big contrast comes from taking several steps, not from a
+     large ratio, which keeps fine gradations (sub-/super-title, captions) from collapsing. */
+  --type-ratio: 1.125;
+}
