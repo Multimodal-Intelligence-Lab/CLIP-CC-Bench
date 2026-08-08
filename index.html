@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CLIP-CC Bench — Project Page</title>
-<meta name="description" content="CLIP-CC Bench: Evaluating Paragraph-Level Video Descriptions in Video–Language Models (EvalMG @ SIGIR 2026). Multimodal Intelligence Lab, South Dakota State University.">
+<title>CLIP-CC-Bench — Project Page</title>
+<meta name="description" content="CLIP-CC-Bench: Evaluating Paragraph-Level Video Descriptions in Video–Language Models (EvalMG @ SIGIR 2026). Multimodal Intelligence Lab, South Dakota State University.">
 <link rel="stylesheet" href="style.css">
 <style>
   /* PROJECT OVERRIDE — align to the lab's CVPR poster (matches the README banner):
@@ -15,6 +15,44 @@
   .band-affil .g    { color: var(--mint-green-deep); }
   .band-affil .leaf { height: 0.85em; width: auto; vertical-align: -0.12em; fill: var(--mint-green-deep); }
 </style>
+
+<!-- Structured data (schema.org) — the paper and the dataset, for machine discovery. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "CLIP-CC-Bench: Evaluating Paragraph-Level Video Descriptions in Video-Language Models",
+  "author": [
+    { "@type": "Person", "name": "Mukhtiar Ali", "affiliation": { "@type": "Organization", "name": "South Dakota State University" } },
+    { "@type": "Person", "name": "Harsh Dubey", "affiliation": { "@type": "Organization", "name": "South Dakota State University" } },
+    { "@type": "Person", "name": "Sugam Mishra", "affiliation": { "@type": "Organization", "name": "South Dakota State University" } },
+    { "@type": "Person", "name": "Chulwoo Pack", "affiliation": { "@type": "Organization", "name": "South Dakota State University" } }
+  ],
+  "datePublished": "2026-08-05",
+  "identifier": "https://doi.org/10.48550/arXiv.2608.04302",
+  "url": "https://arxiv.org/abs/2608.04302",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "codeRepository": "https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench",
+  "abstract": "Benchmarking video-language models has largely focused on short clips and single-sentence metrics, leaving open whether current systems can generate accurate long-form, paragraph-level descriptions. We introduce CLIP-CC-Bench, an evaluation suite for long-form video description built from 5 hours of movie content segmented into 90-second clips, each paired with an expert-written paragraph-style reference. The evaluation suite employs an ensemble of five state-of-the-art LLM-based embedding models to increase reliability and mitigate single-model bias, and applies two complementary methodologies: (i) coarse-grained semantic matching and (ii) fine-grained semantic matching to compare model-generated descriptions against CLIP-CC-Bench references. Using this framework, we evaluate 17 state-of-the-art video-language models and report both their Borda-aggregated rankings and their average scores on CLIP-CC-Bench. We further quantify the protocol's internal reliability through inter-judge agreement and bootstrap ranking stability. We release standardized evaluation scripts, model outputs, and aggregation tools at https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench to support reproducibility. CLIP-CC-Bench provides a practical evaluation framework for long-form video description, filling a gap left by existing short-clip and QA-only benchmarks."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "CLIP-CC",
+  "description": "200 movie clips of about 90 seconds each (~5 hours in total) drawn from more than 140 films spanning 1959–2024, each paired with an English human-narrated reference description averaging 402±208 words.",
+  "url": "https://multimodal-intelligence-lab.github.io/CLIP-CC-Bench/",
+  "sameAs": [
+    "https://huggingface.co/datasets/IVSL-SDSU/Clip-CC",
+    "https://github.com/Multimodal-Intelligence-Lab/CLIP-CC"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": { "@type": "Organization", "name": "Multimodal Intelligence Lab, South Dakota State University" },
+  "isAccessibleForFree": true,
+  "citation": "https://arxiv.org/abs/2608.04302"
+}
+</script>
 </head>
 <body class="accent-green">
 
@@ -39,7 +77,7 @@
 
   <!-- ↓↓↓ EDIT FOR YOUR PROJECT ↓↓↓ -->
   <div class="band-center">
-    <h1 class="band-title"><b>CLIP-CC Bench</b>: Evaluating Paragraph-Level Video Descriptions in Video&ndash;Language Models</h1>
+    <h1 class="band-title"><b>CLIP-CC-Bench</b>: Evaluating Paragraph-Level Video Descriptions in Video&ndash;Language Models</h1>
     <p class="band-authors">Mukhtiar Ali<sup>*</sup>, Harsh Dubey<sup>*</sup>, Sugam Mishra<sup>*</sup>, Chulwoo Pack</p>
     <p class="band-affil">South Dakota State University &middot; Dept. of Electrical Engineering &amp; Computer Science &middot; <span class="g">M</span>ultimodal <span class="g">Int</span>elligence Lab&nbsp;<svg class="leaf" viewBox="0 0 576 512" aria-hidden="true"><path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465 467.5 576 326.7 576 144c0-44.5-13.9-93.4-29.8-134.3z"/></svg> &middot; <sup>*</sup>Equal contribution</p>
   </div>
@@ -49,6 +87,10 @@
 
 <!-- Action buttons — edit the hrefs; add/remove buttons (Video, Data, Demo, …) as needed. -->
 <nav class="band-actions" aria-label="Project links">
+  <a class="btn" href="https://arxiv.org/abs/2608.04302" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+    Paper (arXiv)
+  </a>
   <a class="btn" href="https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
     Code
@@ -75,7 +117,7 @@
       <div class="prose abstract">
         <p>Benchmarking video&ndash;language models has largely focused on short clips and single-sentence
         metrics, leaving open whether current systems can generate accurate long-form, paragraph-level
-        descriptions. We introduce CLIP-CC Bench, an evaluation suite for long-form video description built
+        descriptions. We introduce CLIP-CC-Bench, an evaluation suite for long-form video description built
         from <span class="num">5 hours</span> of movie content segmented into 90-second clips, each paired
         with an expert-written paragraph-style reference. The suite employs an ensemble of
         <span class="num">five</span> state-of-the-art LLM-based embedding models to mitigate single-model
@@ -93,7 +135,7 @@
     <div class="wrap">
       <h2>Approach</h2>
       <div class="prose">
-        <p>CLIP-CC Bench scores a candidate paragraph against an expert reference using an ensemble of five
+        <p>CLIP-CC-Bench scores a candidate paragraph against an expert reference using an ensemble of five
         long-context embedding judges. Each judge combines a coarse-grained, paragraph-level cosine
         similarity with a fine-grained, sentence-level F1 (greedy best-match), merged into a harmonic mean
         (HM-CF). Per-judge rankings are aggregated with Borda count to produce the leaderboard, and the
@@ -157,11 +199,15 @@
       <div class="cite">
         <button class="copy-btn" type="button" data-copy="#bibtex-src">Copy</button>
         <span class="vh" role="status" aria-live="polite"></span>
-<pre id="bibtex-src">@inproceedings{ali2026clipcc,
-  title     = {{CLIP-CC} Bench: Evaluating Paragraph-Level Video Descriptions in Video--Language Models},
-  author    = {Ali, Mukhtiar and Dubey, Harsh and Mishra, Sugam and Pack, Chulwoo},
-  booktitle = {Proceedings of the Second Workshop on Evaluation for Multi-Modal Generation (EvalMG), SIGIR},
-  year      = {2026}
+<pre id="bibtex-src">@misc{ali2026clipccbench,
+  title         = {{CLIP-CC-Bench}: Evaluating Paragraph-Level Video Descriptions in Video--Language Models},
+  author        = {Ali, Mukhtiar and Dubey, Harsh and Mishra, Sugam and Pack, Chulwoo},
+  year          = {2026},
+  eprint        = {2608.04302},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  note          = {Presented at the 2nd Workshop on Evaluation for Multimodal Generation (EvalMG), ACM SIGIR 2026},
+  url           = {https://arxiv.org/abs/2608.04302}
 }</pre>
       </div>
     </div>
