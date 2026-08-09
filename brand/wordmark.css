@@ -1,0 +1,42 @@
+/* MINT — the lab wordmark treatment (the single canonical definition).
+   The lab name written out in running text — "Multimodal Intelligence Lab" with the acronym letters
+   picked out in mint green and the leaf mark trailing it. It is the ONLY approved way to set the lab
+   name inline; before this file it lived as copy-pasted CSS in the poster, the README header and the
+   project pages, under three class names, with three different greens and two leaf sizings.
+
+   Import it (path relative to your file) ALONGSIDE colors.css, which supplies --mint-green:
+       @import "../brand/colors.css";
+       @import "../brand/wordmark.css";
+   Keep BOTH imports explicit — the module build copiers discover brand refs from the module's own
+   stylesheet only, so an implicit dependency would not be vendored into dist/.
+
+   ── The canonical HTML (copy this) ─────────────────────────────────────────────────────────────
+   .mint-name is the container; .g marks the highlighted letters; .leaf is the trailing mark.
+
+     <p class="affil mint-name">South Dakota State University &middot;
+       <span class="g">M</span>ultimodal <span class="g">Int</span>elligence Lab&nbsp;<svg
+         class="leaf" viewBox="0 0 576 512" aria-hidden="true"><path
+         style="fill:var(--mint-green)" d="COPY THE d FROM brand/icons/leaf.svg"/></svg></p>
+
+   The highlighted letters are M and Int — and only those — because the acronym is MINT
+   (Multimodal INTelligence). Never highlight a different span, and never bold the rest of the line.
+
+   The leaf path is NOT reproduced here on purpose: copy the `d` verbatim from brand/icons/leaf.svg
+   (one asset, one place) and never redraw, retrace or edit it. Print consumers must carry
+   style="fill:var(--mint-green)" on the <path> itself — an <img>-referenced SVG cannot inherit a CSS
+   var in print — while screen consumers may let the .leaf rule below paint it. */
+
+.mint-name .g {
+  color: var(--mint-green);
+  font-weight: 700;   /* the poster's bold — deliberately the only bold in the affiliation line */
+}
+
+.mint-name .leaf {
+  height: 0.95em;
+  width: 1.05em;      /* DELIBERATE, and not the viewBox's own aspect: 576/512 at 0.95em tall would
+                         be 1.069em, so this hand-tuned box optically balances the mark beside the
+                         cap-height letters (it letterboxes the leaf ~2% shorter). It is the poster's
+                         sizing — the canonical one. Preserve the pair; don't "fix" it to the ratio. */
+  vertical-align: -0.14em;
+  fill: var(--mint-green);
+}

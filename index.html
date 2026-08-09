@@ -7,13 +7,15 @@
 <meta name="description" content="CLIP-CC-Bench: Evaluating Paragraph-Level Video Descriptions in Video–Language Models (EvalMG @ SIGIR 2026). Multimodal Intelligence Lab, South Dakota State University.">
 <link rel="stylesheet" href="style.css">
 <style>
-  /* PROJECT OVERRIDE — align to the lab's CVPR poster (matches the README banner):
-     poster blue #003087 for the band chrome + blue accents, poster green #2E7D32 for the
-     accent-green link/button/badge color. Local to this page; shared brand/colors.css untouched. */
-  body { --sdsu-blue: #003087; --mint-green-deep: #2E7D32; }
-  /* Lab-name treatment in the affiliation, matching the README banner: green M + Int + trailing leaf. */
-  .band-affil .g    { color: var(--mint-green-deep); }
-  .band-affil .leaf { height: 0.85em; width: auto; vertical-align: -0.12em; fill: var(--mint-green-deep); }
+  /* PROJECT OVERRIDE — align to the lab's CVPR poster (matches the README banner).
+     style.css reads var(--sdsu-blue) throughout for the band chrome, so one line maps it to
+     SDState Campanile Blue (PMS 287) — an official SDSU secondary, and the band blue on the
+     printed poster this page is built from. Token only: no raw hex, brand/colors.css untouched. */
+  body { --sdsu-blue: var(--sdsu-campanile); }
+  /* Lab-name treatment in the affiliation, matching the README banner: green M + Int + trailing leaf.
+     Canonical wordmark = --mint-green on bold letters + the canonical leaf sizing (brand/wordmark.css). */
+  .band-affil .g    { color: var(--mint-green); font-weight: 700; }
+  .band-affil .leaf { height: 0.95em; width: 1.05em; vertical-align: -0.14em; fill: var(--mint-green); }
 </style>
 
 <!-- Structured data (schema.org) — the paper and the dataset, for machine discovery. -->

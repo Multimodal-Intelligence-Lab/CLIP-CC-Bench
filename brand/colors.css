@@ -12,8 +12,16 @@
   /* PMS-defined primaries from the SDState Graphic Identity Standards — NOT eyedropped from
      the logo PNG (which renders them slightly differently). The SDSU mark is a trademark:
      use these in university / official contexts; never recolor the mark. */
-  --sdsu-yellow: #ffd100;  /* SDState Yellow — PMS 109 */
-  --sdsu-blue:   #0033a0;  /* SDState Blue  — PMS 286 */
+  --sdsu-yellow:    #ffd100;  /* SDState Yellow  — PMS 109 */
+  --sdsu-blue:      #0033a0;  /* SDState Blue    — PMS 286 */
+  --sdsu-campanile: #003087;  /* Campanile Blue  — PMS 287, official secondary; the band blue on
+                                 the printed CVPR poster and the project artifacts built from it */
+  --sdsu-navy:      #0c2340;  /* SDState Navy    — PMS 289, official secondary */
+
+  /* Which blue/green where:
+       band chrome + institutional text → --sdsu-campanile (or --sdsu-blue for the primary treatment)
+       the M-INT wordmark letters + leaf → --mint-green   (see wordmark.css)
+       screen accents (links, rules, badges) → --mint-green-deep */
 
   /* ── Neutrals ──────────────────────────────────────────────────────────────────── */
   --ink:    #222222;  /* body text */
