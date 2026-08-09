@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use CLIP-CC-Bench in your research, please cite the paper (see preferred-citation)."
+title: "CLIP-CC-Bench: Evaluating Paragraph-Level Video Descriptions in Video-Language Models"
+type: software
+authors:
+  - given-names: "Mukhtiar"
+    family-names: "Ali"
+    affiliation: "South Dakota State University"
+  - given-names: "Harsh"
+    family-names: "Dubey"
+    affiliation: "South Dakota State University"
+  - given-names: "Sugam"
+    family-names: "Mishra"
+    affiliation: "South Dakota State University"
+  - given-names: "Chulwoo"
+    family-names: "Pack"
+    affiliation: "South Dakota State University"
+repository-code: "https://github.com/Multimodal-Intelligence-Lab/CLIP-CC-Bench"
+preferred-citation:
+  type: article
+  title: "CLIP-CC-Bench: Evaluating Paragraph-Level Video Descriptions in Video-Language Models"
+  authors:
+    - given-names: "Mukhtiar"
+      family-names: "Ali"
+      affiliation: "South Dakota State University"
+    - given-names: "Harsh"
+      family-names: "Dubey"
+      affiliation: "South Dakota State University"
+    - given-names: "Sugam"
+      family-names: "Mishra"
+      affiliation: "South Dakota State University"
+    - given-names: "Chulwoo"
+      family-names: "Pack"
+      affiliation: "South Dakota State University"
+  year: 2026
+  doi: "10.48550/arXiv.2608.04302"
+  url: "https://arxiv.org/abs/2608.04302"
+  identifiers:
+    - type: doi
+      value: "10.48550/arXiv.2608.04302"
+    - type: other
+      value: "arXiv:2608.04302"
+      description: "arXiv identifier"
+  notes: "Presented at the 2nd Workshop on Evaluation for Multimodal Generation (EvalMG), ACM SIGIR 2026."
