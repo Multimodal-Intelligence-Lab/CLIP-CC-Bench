@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "_comment": "Display names and parameter counts for every model on the leaderboard. Paper models are scored from results/embedding_models/aggregated_results/; community models are scored from results/leaderboard/additions/ and should also carry \"raw_outputs_url\" and \"added\" (YYYY-MM-DD), which are copied into leaderboard.json.",
+  "models": {
+    "Qwen2.5-32B": {
+      "display": "Qwen2.5-32B",
+      "params": "32B"
+    },
+    "Qwen2.5-72B": {
+      "display": "Qwen2.5-72B",
+      "params": "72B"
+    },
+    "internvl": {
+      "display": "InternVL2",
+      "params": "8B"
+    },
+    "llava_next_video": {
+      "display": "LLaVA-NeXT-Video",
+      "params": "7B"
+    },
+    "llava_one_vision": {
+      "display": "LLaVA-OneVision",
+      "params": "7B"
+    },
+    "longva": {
+      "display": "LongVA",
+      "params": "7B"
+    },
+    "longvu": {
+      "display": "LongVU",
+      "params": "7B"
+    },
+    "minicpm": {
+      "display": "MiniCPM-V",
+      "params": "8B"
+    },
+    "mplug": {
+      "display": "mPLUG-Owl3",
+      "params": "7B"
+    },
+    "oryx": {
+      "display": "Oryx",
+      "params": "7B"
+    },
+    "sharegpt4": {
+      "display": "ShareGPT4Video",
+      "params": "8B"
+    },
+    "timechat": {
+      "display": "TimeChat",
+      "params": "7B"
+    },
+    "ts_llava": {
+      "display": "TS-LLaVA",
+      "params": "7B"
+    },
+    "video_xl": {
+      "display": "Video-XL",
+      "params": "7B"
+    },
+    "videochatflash": {
+      "display": "VideoChat-Flash",
+      "params": "2B"
+    },
+    "videollama3": {
+      "display": "VideoLLaMA3",
+      "params": "7B"
+    },
+    "vilamp": {
+      "display": "ViLAMP",
+      "params": "7B"
+    }
+  }
+}

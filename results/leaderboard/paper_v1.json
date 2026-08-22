@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "rule": "Borda points per judge = V - rank by mean HM-CF (descending); final order = total Borda (descending), ties broken by the full-precision mean HM-CF (descending).",
+  "judges": [
+    "gte-qwen2-7b",
+    "kalm",
+    "nemo",
+    "nv-embed",
+    "qwen3-8b"
+  ],
+  "V": 17,
+  "max_borda": 80,
+  "rows": [
+    {
+      "slug": "videollama3",
+      "display": "VideoLLaMA3",
+      "borda": 80,
+      "mean_hm_cf": 0.6714074,
+      "hm_cf_2dp": "0.67",
+      "mean_coarse": 0.7300842,
+      "mean_fine": 0.6277344,
+      "rank": 1
+    },
+    {
+      "slug": "mplug",
+      "display": "mPLUG-Owl3",
+      "borda": 75,
+      "mean_hm_cf": 0.6560872,
+      "hm_cf_2dp": "0.66",
+      "mean_coarse": 0.7065094000000001,
+      "mean_fine": 0.6180492,
+      "rank": 2
+    },
+    {
+      "slug": "llava_one_vision",
+      "display": "LLaVA-OneVision",
+      "borda": 67,
+      "mean_hm_cf": 0.6396456,
+      "hm_cf_2dp": "0.64",
+      "mean_coarse": 0.6922524,
+      "mean_fine": 0.5999966,
+      "rank": 3
+    },
+    {
+      "slug": "vilamp",
+      "display": "ViLAMP",
+      "borda": 67,
+      "mean_hm_cf": 0.6383554,
+      "hm_cf_2dp": "0.64",
+      "mean_coarse": 0.6856584,
+      "mean_fine": 0.6042310000000001,
+      "rank": 4
+    },
+    {
+      "slug": "longvu",
+      "display": "LongVU",
+      "borda": 61,
+      "mean_hm_cf": 0.6265495999999999,
+      "hm_cf_2dp": "0.63",
+      "mean_coarse": 0.6761526,
+      "mean_fine": 0.5896406,
+      "rank": 5
+    },
+    {
+      "slug": "Qwen2.5-72B",
+      "display": "Qwen2.5-72B",
+      "borda": 55,
+      "mean_hm_cf": 0.6184134,
+      "hm_cf_2dp": "0.62",
+      "mean_coarse": 0.6662788,
+      "mean_fine": 0.5814256,
+      "rank": 6
+    },
+    {
+      "slug": "Qwen2.5-32B",
+      "display": "Qwen2.5-32B",
+      "borda": 48,
+      "mean_hm_cf": 0.6076157999999999,
+      "hm_cf_2dp": "0.61",
+      "mean_coarse": 0.6546162,
+      "mean_fine": 0.5713652,
+      "rank": 7
+    },
+    {
+      "slug": "videochatflash",
+      "display": "VideoChat-Flash",
+      "borda": 42,
+      "mean_hm_cf": 0.5997714000000001,
+      "hm_cf_2dp": "0.60",
+      "mean_coarse": 0.633154,
+      "mean_fine": 0.5754656,
+      "rank": 8
+    },
+    {
+      "slug": "minicpm",
+      "display": "MiniCPM-V",
+      "borda": 42,
+      "mean_hm_cf": 0.5997709999999999,
+      "hm_cf_2dp": "0.60",
+      "mean_coarse": 0.6619132000000001,
+      "mean_fine": 0.5537335999999999,
+      "rank": 9
+    },
+    {
+      "slug": "video_xl",
+      "display": "Video-XL",
+      "borda": 36,
+      "mean_hm_cf": 0.5893556,
+      "hm_cf_2dp": "0.59",
+      "mean_coarse": 0.6212202,
+      "mean_fine": 0.5667966,
+      "rank": 10
+    },
+    {
+      "slug": "sharegpt4",
+      "display": "ShareGPT4Video",
+      "borda": 29,
+      "mean_hm_cf": 0.5806129999999999,
+      "hm_cf_2dp": "0.58",
+      "mean_coarse": 0.6127942,
+      "mean_fine": 0.5584152,
+      "rank": 11
+    },
+    {
+      "slug": "internvl",
+      "display": "InternVL2",
+      "borda": 27,
+      "mean_hm_cf": 0.5808174,
+      "hm_cf_2dp": "0.58",
+      "mean_coarse": 0.6224808000000001,
+      "mean_fine": 0.5525672,
+      "rank": 12
+    },
+    {
+      "slug": "timechat",
+      "display": "TimeChat",
+      "borda": 20,
+      "mean_hm_cf": 0.5594946000000001,
+      "hm_cf_2dp": "0.56",
+      "mean_coarse": 0.5862384,
+      "mean_fine": 0.5432669999999999,
+      "rank": 13
+    },
+    {
+      "slug": "llava_next_video",
+      "display": "LLaVA-NeXT-Video",
+      "borda": 16,
+      "mean_hm_cf": 0.5456920000000001,
+      "hm_cf_2dp": "0.55",
+      "mean_coarse": 0.5570224,
+      "mean_fine": 0.5434378,
+      "rank": 14
+    },
+    {
+      "slug": "ts_llava",
+      "display": "TS-LLaVA",
+      "borda": 9,
+      "mean_hm_cf": 0.5305054,
+      "hm_cf_2dp": "0.53",
+      "mean_coarse": 0.5419742,
+      "mean_fine": 0.526729,
+      "rank": 15
+    },
+    {
+      "slug": "oryx",
+      "display": "Oryx",
+      "borda": 6,
+      "mean_hm_cf": 0.5249462,
+      "hm_cf_2dp": "0.52",
+      "mean_coarse": 0.5403368000000001,
+      "mean_fine": 0.5191206,
+      "rank": 16
+    },
+    {
+      "slug": "longva",
+      "display": "LongVA",
+      "borda": 0,
+      "mean_hm_cf": 0.4783160000000001,
+      "hm_cf_2dp": "0.48",
+      "mean_coarse": 0.4834758,
+      "mean_fine": 0.482618,
+      "rank": 17
+    }
+  ]
+}

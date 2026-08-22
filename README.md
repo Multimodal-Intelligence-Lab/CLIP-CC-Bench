@@ -16,7 +16,13 @@ CLIP-CC-Bench is a text embedding-based evaluation framework that:
 
 ## Leaderboard
 
+<!-- LEADERBOARD:INTRO:BEGIN -->
+
 Final ranking of the 17 VLMs on CLIP-CC-Bench: **Borda** = Borda count across the 5 embedding judges; **Mean HM-CF** = average harmonic mean of coarse- and fine-grained similarity across judges. Full per-judge scores are in the [`results/embedding_models/aggregated_results/`](results/embedding_models/aggregated_results/) folder.
+
+<!-- LEADERBOARD:INTRO:END -->
+
+<!-- LEADERBOARD:BEGIN -->
 
 | Rank | VLM | Borda | Mean HM-CF |
 |-----:|-----|------:|-----------:|
@@ -37,6 +43,27 @@ Final ranking of the 17 VLMs on CLIP-CC-Bench: **Borda** = Borda count across th
 | 15 | TS-LLaVA | 9 | 0.53 |
 | 16 | Oryx | 6 | 0.52 |
 | 17 | LongVA | 0 | 0.48 |
+
+<!-- LEADERBOARD:END -->
+
+## Adding your model
+
+The leaderboard takes post-publication submissions. The paper's 17-model result stays frozen in
+[`results/leaderboard/paper_v1.json`](results/leaderboard/paper_v1.json); new models are ranked
+alongside it in the same pool.
+
+1. Run the released pipeline (`./run_all_evaluations.sh`) on the identical 199 clips, with all five
+   embedding judges.
+2. Open a pull request containing:
+   - your per-judge aggregated results at `results/leaderboard/additions/<judge>/<slug>.json`, in the
+     same schema as `results/embedding_models/aggregated_results/<judge>/<vlm>.json`;
+   - an entry in [`results/leaderboard/models.json`](results/leaderboard/models.json) with the
+     display name, parameter count and a public URL for the raw model outputs.
+3. A maintainer re-verifies the scores from those raw outputs and regenerates every published table
+   with `python3 tools/build_leaderboard.py`.
+
+`python3 tools/build_leaderboard.py --check` is the drift guard: it recomputes every table and exits
+2 (changing nothing) if any of them no longer matches the data.
 
 ## Project Structure
 
@@ -72,11 +99,19 @@ CLIP-CC-Bench/
 │       ├── llava_next_video.json
 │       └── ... (17 VLM models)
 ├── results/
-│   └── embedding_models/
-│       └── aggregated_results/       # Published per-judge scores (shipped)
-│           ├── aggregated_results.csv    # 17 VLMs × 5 judges (coarse / fine / HM-CF)
-│           ├── cross_decoder_stats.json
-│           └── <judge>/<vlm>.json
+│   ├── embedding_models/
+│   │   └── aggregated_results/       # Published per-judge scores (shipped)
+│   │       ├── aggregated_results.csv    # 17 VLMs × 5 judges (coarse / fine / HM-CF)
+│   │       ├── cross_decoder_stats.json
+│   │       └── <judge>/<vlm>.json
+│   └── leaderboard/
+│       ├── paper_v1.json             # Frozen paper result (immutable)
+│       ├── models.json               # Display names + parameter counts
+│       ├── leaderboard.json          # Generated: the current ranking
+│       └── additions/                # Community submissions (<judge>/<slug>.json)
+├── tools/                            # Leaderboard generator + drift check
+│   ├── build_leaderboard.py
+│   └── test_build_leaderboard.py
 ├── run_all_evaluations.sh            # Master evaluation script
 ├── LICENSE                           # MIT (code)
 ├── DATA_LICENSE                      # CC-BY-4.0 (reference summaries)
