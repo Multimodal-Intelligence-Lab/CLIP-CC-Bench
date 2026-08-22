@@ -18,7 +18,7 @@ CLIP-CC-Bench is a text embedding-based evaluation framework that:
 
 <!-- LEADERBOARD:INTRO:BEGIN -->
 
-Final ranking of the 17 VLMs on CLIP-CC-Bench: **Borda** = Borda count across the 5 embedding judges; **Mean HM-CF** = average harmonic mean of coarse- and fine-grained similarity across judges. Full per-judge scores are in the [`results/embedding_models/aggregated_results/`](results/embedding_models/aggregated_results/) folder.
+Current ranking of the 17 VLMs on CLIP-CC-Bench: **Borda** = Borda count across the 5 embedding judges; **Mean HM-CF** = average harmonic mean of coarse- and fine-grained similarity across judges. Full per-judge scores are in the [`results/embedding_models/aggregated_results/`](results/embedding_models/aggregated_results/) folder.
 
 <!-- LEADERBOARD:INTRO:END -->
 

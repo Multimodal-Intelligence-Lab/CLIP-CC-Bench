@@ -497,7 +497,7 @@ def check_finding_prose(rows):
 def bench_intro_lines(ctx):
     return [
         "",
-        "Final ranking of the %d VLMs on CLIP-CC-Bench: **Borda** = Borda count across "
+        "Current ranking of the %d VLMs on CLIP-CC-Bench: **Borda** = Borda count across "
         "the %d embedding judges; **Mean HM-CF** = average harmonic mean of coarse- and "
         "fine-grained similarity across judges. Full per-judge scores are in the "
         "[`%s`](%s) folder."
@@ -539,7 +539,7 @@ def space_lead_lines(ctx):
 
 def space_caption_lines(ctx):
     return [
-        '      <caption id="lb-caption">Final ranking of the %d VLMs on CLIP-CC-Bench. '
+        '      <caption id="lb-caption">Current ranking of the %d VLMs on CLIP-CC-Bench. '
         "Borda max = %d&times;%d = %d.</caption>"
         % (ctx["V"], ctx["J"], ctx["V"] - 1, ctx["max_borda"])
     ]
@@ -596,7 +596,7 @@ def site_stat_lines(ctx):
 
 def site_prose_lines(ctx):
     return [
-        '      <p class="prose" style="margin-top:1rem">Final ranking of the %d VLMs. '
+        '      <p class="prose" style="margin-top:1rem">Current ranking of the %d VLMs. '
         "<strong>Borda</strong> = Borda count across the %s embedding judges; "
         "<strong>Mean HM-CF</strong> = average harmonic mean of coarse- and fine-grained "
         "similarity across judges.</p>" % (ctx["V"], number_word(ctx["J"]))

@@ -444,11 +444,11 @@ def test_paper_count_is_decoupled_from_live_count():
 
         # (b) every live-scoped count did move to 18
         for label, needles in {
-            "bench README.md": ["Final ranking of the 18 VLMs on CLIP-CC-Bench"],
+            "bench README.md": ["Current ranking of the 18 VLMs on CLIP-CC-Bench"],
             "space index.html": [
                 "CLIP-CC-Bench: 18 video-language models",
                 "Eighteen video&ndash;language models ranked",
-                "Final ranking of the 18 VLMs on CLIP-CC-Bench. Borda max = 5&times;17 = 85.",
+                "Current ranking of the 18 VLMs on CLIP-CC-Bench. Borda max = 5&times;17 = 85.",
                 # ... while the community footnote quotes the frozen pool
                 "frozen 17-model result (V=17, max Borda 80)",
             ],
@@ -458,7 +458,7 @@ def test_paper_count_is_decoupled_from_live_count():
             ],
             "site index.html": [
                 '<div class="big">18</div>',
-                "Final ranking of the 18 VLMs.",
+                "Current ranking of the 18 VLMs.",
             ],
             "bench leaderboard.json": ['"V": 18', '"max_borda": 85'],
         }.items():
