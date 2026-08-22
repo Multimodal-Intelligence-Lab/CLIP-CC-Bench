@@ -33,15 +33,15 @@ def load_evaluation_results(base_dir: Path = None) -> Dict:
     base_path = Path(base_dir)
     results = {}
 
-    # Get all embedding model directories
-    embedding_dirs = [d for d in base_path.iterdir() if d.is_dir()]
+    # Get all embedding model directories (sorted: filesystem order is not deterministic)
+    embedding_dirs = sorted([d for d in base_path.iterdir() if d.is_dir()])
 
     for embed_dir in embedding_dirs:
         embedding_name = embed_dir.name
         results[embedding_name] = {}
 
         # Load all VLM JSON files in this embedding directory
-        for json_file in embed_dir.glob("*.json"):
+        for json_file in sorted(embed_dir.glob("*.json")):
             vlm_name = json_file.stem  # filename without .json
 
             with open(json_file, 'r') as f:
@@ -142,13 +142,17 @@ def generate_overall_vlm_ranking_table(borda_scores: Dict[str, int],
         data.append({
             'VLM': vlm,
             'Borda': borda_scores[vlm],
-            'MeanJudge': round(mean_judge_scores[vlm], 2),
-            'StdJudge': round(mean_judge_std[vlm], 2)
+            'MeanJudge': mean_judge_scores[vlm],
+            'StdJudge': mean_judge_std[vlm]
         })
 
-    # Sort by Borda (primary), then MeanJudge (secondary)
+    # Sort by Borda (primary), then MeanJudge (secondary).
+    # The tiebreak must see the full-precision means: rounding first makes
+    # distinct scores compare equal and the order fall back to input order.
     df = pd.DataFrame(data)
     df = df.sort_values(by=['Borda', 'MeanJudge'], ascending=[False, False])
+    df['MeanJudge'] = df['MeanJudge'].round(2)
+    df['StdJudge'] = df['StdJudge'].round(2)
     df.insert(0, 'Rank', range(1, len(df) + 1))
 
     return df
